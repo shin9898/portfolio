@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Koki Hata — 個人ディスクロージャー</title>
+    <meta
+      name="description"
+      content="Koki Hata（GitHub: shin9898）の個人サイト。triplethree.inc 所属。白表紙の開示誌をめくる。職歴の空欄は未記入のまま置く。"
+    />
+    <meta name="author" content="Koki Hata" />
+    <link rel="canonical" href="https://shin9898.github.io/portfolio/" />
+    <meta property="og:title" content="Koki Hata — 個人ディスクロージャー" />
+    <meta
+      property="og:description"
+      content="神奈川のソフトウェアエンジニア。triplethree.inc 所属。頁をめくって読む。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shin9898.github.io/portfolio/" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#dfe3ea" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/stPageFlip.css" />
+    <link rel="stylesheet" href="./css/site.css" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false" style="position: absolute">
+      <!-- Lucide (ISC), shadcn default. https://lucide.dev/icons -->
+      <symbol id="mark-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <title>landmark</title>
+        <path d="M10 18v-7" />
+        <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" />
+        <path d="M14 18v-7" />
+        <path d="M18 18v-7" />
+        <path d="M3 22h18" />
+        <path d="M6 18v-7" />
+      </symbol>
+      <symbol id="mark-engineer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <title>square-terminal</title>
+        <path d="m7 11 2-2-2-2" />
+        <path d="M11 13h4" />
+        <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+      </symbol>
+      <symbol id="mark-cs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <title>headset</title>
+        <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" />
+        <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+      </symbol>
+      <symbol id="mark-pm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <title>clipboard-list</title>
+        <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+        <path d="M12 11h4" />
+        <path d="M12 16h4" />
+        <path d="M8 11h.01" />
+        <path d="M8 16h.01" />
+      </symbol>
+    </svg>
+
+    <a class="skip" href="#plain">テキスト版へ</a>
+
+    <header class="mast">
+      <p class="mast-kicker">提出書類のかたち</p>
+      <h1 class="mast-title">個人ディスクロージャー</h1>
+      <p class="mast-lib">page-flip 2.0.7</p>
+    </header>
+
+    <div class="desk">
+      <nav class="toc" aria-label="頁の見出し">
+        <button type="button" data-jump="0">表紙</button>
+        <button type="button" data-jump="1">注記</button>
+        <button type="button" data-jump="3">今期</button>
+        <button type="button" data-jump="4">科目</button>
+        <button type="button" data-jump="6">未記入</button>
+        <button type="button" data-jump="8">奥付</button>
+      </nav>
+
+      <div class="stage" id="stage">
+        <div class="mount is-showing-cover" id="mount">
+          <div class="book" id="book" aria-label="個人ディスクロージャー">
+            <!-- 0 表紙 -->
+            <div class="leaf leaf-cover" data-book-page data-density="hard">
+              <div class="cover">
+                <p class="cover-kicker">KOKI HATA / shin9898</p>
+                <h2 class="cover-title">Koki<br />Hata</h2>
+                <p class="cover-sub">ソフトウェアエンジニア · 神奈川</p>
+                <div class="cols">
+                  <article>
+                    <dt>所属 <span class="mark">※1</span></dt>
+                    <dd>triplethree.inc</dd>
+                    <dt>職</dt>
+                    <dd>エンジニア</dd>
+                  </article>
+                  <article>
+                    <dt>公開</dt>
+                    <dd>GitHub</dd>
+                    <dt>番号</dt>
+                    <dd>shin9898</dd>
+                  </article>
+                  <article>
+                    <dt>今期</dt>
+                    <dd>飲食SaaS</dd>
+                    <dt>過去 <span class="mark">※2</span></dt>
+                    <dd>未記入</dd>
+                  </article>
+                </div>
+                <p class="three" aria-hidden="true">3&nbsp;&nbsp;3&nbsp;&nbsp;3</p>
+                <p class="cover-hint">角をつまむ · ボタンでもめくれる</p>
+              </div>
+            </div>
+
+            <!-- 1 注記 -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">P.01 — 注記</p>
+                <h2>実記と未記入</h2>
+                <p class="lead">
+                  白表紙の冊子。欄は報告書の注記で分ける。偽の職歴・成績は置かない。四種のマークは役割の UI 記号。雇用主名ではない。地の線画は飾り。
+                </p>
+                <ul class="role-index">
+                  <li>
+                    <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="銀行">
+                      <title>銀行</title>
+                      <use href="#mark-bank" />
+                    </svg>
+                    <div>
+                      <p class="role-name">銀行</p>
+                      <p class="role-read">過去は空欄。</p>
+                    </div>
+                  </li>
+                  <li>
+                    <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="エンジニア">
+                      <title>エンジニア</title>
+                      <use href="#mark-engineer" />
+                    </svg>
+                    <div>
+                      <p class="role-name">エンジニア</p>
+                      <p class="role-read">実装の手元。</p>
+                    </div>
+                  </li>
+                  <li>
+                    <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="CS">
+                      <title>CS</title>
+                      <use href="#mark-cs" />
+                    </svg>
+                    <div>
+                      <p class="role-name">CS</p>
+                      <p class="role-read">受ける窓口。</p>
+                    </div>
+                  </li>
+                  <li>
+                    <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="プロダクトマネージャー">
+                      <title>プロダクトマネージャー</title>
+                      <use href="#mark-pm" />
+                    </svg>
+                    <div>
+                      <p class="role-name">PM</p>
+                      <p class="role-read">科目の並び。</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="fn">
+                  <p>
+                    <span class="mark">※1 実記</span>
+                    氏名、GitHub、所属、いま触っている仕事。公開プロフィールの範囲。
+                  </p>
+                  <p>
+                    <span class="mark">※2 未記入</span>
+                    過去の社名、期間、野球の成績。届くまで空欄。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 提出者 -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">
+                  <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-engineer" /></svg>
+                  P.02 — 提出者
+                </p>
+                <p class="field-label">氏名</p>
+                <p class="legal-name">Koki Hata</p>
+                <table class="ledger">
+                  <tbody>
+                    <tr>
+                      <th>GitHub</th>
+                      <td>
+                        <a href="https://github.com/shin9898">shin9898</a>
+                        <span class="mark">※1</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>所属</th>
+                      <td>triplethree.inc <span class="mark">※1</span></td>
+                    </tr>
+                    <tr>
+                      <th>居</th>
+                      <td>神奈川 <span class="mark">※1</span></td>
+                    </tr>
+                    <tr>
+                      <th>職</th>
+                      <td>ソフトウェアエンジニア <span class="mark">※1</span></td>
+                    </tr>
+                    <tr>
+                      <th>X</th>
+                      <td>
+                        <a href="https://x.com/shintech9898">shintech9898</a>
+                        <span class="mark">※1</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="quote">飲食向け SaaS を、現場で使えるところまで運ぶ。</p>
+                <p class="fn">
+                  職は公開プロフィールの範囲。銀行・CS・PM は役割の記号であり、肩書の主張ではない。
+                </p>
+              </div>
+            </div>
+
+            <!-- 3 今期 -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">P.03 — 今期の勘定</p>
+                <div class="period-head">
+                  <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="エンジニア">
+                    <title>エンジニア</title>
+                    <use href="#mark-engineer" />
+                  </svg>
+                  <div>
+                    <h2>飲食チェーン向け SaaS</h2>
+                    <p class="kicker">triplethree.inc · いまの仕事</p>
+                  </div>
+                </div>
+                <p>
+                  Go のバックエンドと TypeScript / React のフロント。仕様から実装、届け切りまで見る。
+                </p>
+                <p>
+                  <svg class="role-svg role-svg-inline" viewBox="0 0 24 24" role="img" aria-label="CS">
+                    <title>CS</title>
+                    <use href="#mark-cs" />
+                  </svg>
+                  CS や現場の声に近い位置で運ぶ。ヘッドセットの記号は、その近さの注記。
+                </p>
+                <p class="fn">
+                  担当案件の期間・肩書の正式名称は <span class="mark">※2</span> 未記入。上の一文は GitHub プロフィール README に本人が公開している範囲。
+                </p>
+              </div>
+            </div>
+
+            <!-- 4 科目 -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">
+                  <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-pm" /></svg>
+                  P.04 — 今期の科目
+                </p>
+                <h2>触っているプロダクト</h2>
+                <p class="kicker">科目の並び。所有の主張ではない。雇用主名は会社名のみ。</p>
+                <ul class="subjects">
+                  <li>
+                    <h3>REPORT</h3>
+                    <p>店舗 QSC 日報・チェックシート。既存機能の開発・改善（Go）。</p>
+                  </li>
+                  <li>
+                    <h3>ONBOARDING</h3>
+                    <p>新人オンボーディング / ホームガイド。実装と届け切り。</p>
+                  </li>
+                  <li>
+                    <h3>LIST / ENGAGEMENT</h3>
+                    <p>従業員・組織 / エンゲージメント。実装と課題のプロダクト化。</p>
+                  </li>
+                  <li>
+                    <h3>MANUAL</h3>
+                    <p>マニュアル（LINE LIFF 連携を含む）。不具合対応・改修。</p>
+                  </li>
+                </ul>
+                <p class="fn">
+                  PM の記号はクリップボード（科目のたとえ）。5番以降と正式な役職名は空欄。
+                </p>
+              </div>
+            </div>
+
+            <!-- 5 技術 -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">
+                  <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-engineer" /></svg>
+                  P.05 — 技術の摘要
+                </p>
+                <h2>いま触っている層</h2>
+                <ul class="stack">
+                  <li>Go <span>業務バックエンド</span></li>
+                  <li>TypeScript / React <span>業務フロント</span></li>
+                  <li>Auth0 · Datadog · Terraform <span>会社で触っている基盤</span></li>
+                  <li>LINE LIFF <span>MANUAL 連携</span></li>
+                  <li>Vue / PHP <span>既存プロダクトに残る層</span></li>
+                </ul>
+                <p class="fn">
+                  仕事（triple-three-inc）で実際に触っているスタック。個人の学習リポとは分けて書く。
+                </p>
+              </div>
+            </div>
+
+            <!-- 6 未記入 -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">
+                  <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-bank" /></svg>
+                  P.06 — 未記入欄
+                </p>
+                <h2>過去の役割</h2>
+                <p class="kicker">銀行は建物の記号。通帳ではなく、空欄の勘定科目として置く。</p>
+                <table class="vacant">
+                  <thead>
+                    <tr>
+                      <th>科目</th>
+                      <th>摘要</th>
+                      <th>期間</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>銀行など過去の役割</td>
+                      <td><span class="blank">________</span></td>
+                      <td><span class="blank blank-sm">____</span></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><span class="blank">________</span></td>
+                      <td><span class="blank blank-sm">____</span></td>
+                    </tr>
+                    <tr>
+                      <td>野球のチーム・成績</td>
+                      <td><span class="blank">________</span></td>
+                      <td><span class="blank blank-sm">____</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="fn">
+                  <span class="mark">※2</span>
+                  社名・期間・数字が届くまで、ここに実在しない勤務先を書かない。社名のトリプルスリーは打率3割・30本塁打・30盗塁の響き。本人の成績ではない。
+                </p>
+              </div>
+            </div>
+
+            <!-- 7 公開 -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">P.07 — 公開の実験</p>
+                <h2>個人リポジトリ</h2>
+                <p class="kicker">本丸の仕事は会社リポ。ここは学習。</p>
+                <ul class="practice">
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop">applied-loop</a>
+                    <span>学習ハーネス。この本と同じ page-flip。</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/BeginnerBridge">BeginnerBridge</a>
+                    <span>Ruby の学習支援</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/python_exercises_per_day">python_exercises_per_day</a>
+                    <span>毎日の Python</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/hc_practice">hc_practice</a>
+                    <span>Haskell の素振り</span>
+                  </li>
+                  <li>
+                    <a href="https://shin9898.github.io/insyoku-research/">insyoku-research</a>
+                    <span>飲食店リサーチ集（Pages）</span>
+                  </li>
+                </ul>
+                <p class="fn">
+                  個人の AI エージェント基盤は private。名前だけ公開プロフィールにあるが、成果物はここには置かない。
+                </p>
+              </div>
+            </div>
+
+            <!-- 8 奥付 -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">P.08 — 奥付</p>
+                <h2>連絡</h2>
+                <ul class="contact">
+                  <li>
+                    GitHub
+                    <a href="https://github.com/shin9898">shin9898</a>
+                  </li>
+                  <li>
+                    ソース
+                    <a href="https://github.com/shin9898/portfolio">shin9898/portfolio</a>
+                  </li>
+                  <li>
+                    Pages（予定）
+                    <a href="https://shin9898.github.io/portfolio/">shin9898.github.io/portfolio</a>
+                  </li>
+                </ul>
+                <p class="fn">
+                  静的 HTML。GitHub Pages のプロジェクトサイト向け（ベースパス <code>/portfolio/</code>）。めくりは StPageFlip（npm: page-flip 2.0.7）。applied-loop と同じライブラリ。見た目は寄せない。
+                </p>
+                <p class="fn credit-line">
+                  Baseball icons (wallpaper) by
+                  <a href="https://thenounproject.com/creator/hafizcreative.id/">Hafiz Nur Lutfianto</a>
+                  from
+                  <a href="https://thenounproject.com/browse/collection-icon/sleek-baseball-296164/">Noun Project</a>
+                  (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>).
+                  Role marks
+                  <a href="https://lucide.dev/icons/landmark">landmark</a>,
+                  <a href="https://lucide.dev/icons/square-terminal">square-terminal</a>,
+                  <a href="https://lucide.dev/icons/headset">headset</a>,
+                  <a href="https://lucide.dev/icons/clipboard-list">clipboard-list</a>
+                  from
+                  <a href="https://lucide.dev/">Lucide</a>
+                  (<a href="https://lucide.dev/license">ISC</a>).
+                </p>
+              </div>
+            </div>
+
+            <!-- 9 裏表紙 -->
+            <div class="leaf leaf-cover leaf-back" data-book-page data-density="hard">
+              <div class="cover cover-back">
+                <p class="cover-kicker">以上 / 控え</p>
+                <h2 class="cover-title">Koki<br />Hata</h2>
+                <p class="cover-sub">頁を閉じる</p>
+                <div class="cols">
+                  <article>
+                    <dt>所属</dt>
+                    <dd>triplethree.inc</dd>
+                  </article>
+                  <article>
+                    <dt>居</dt>
+                    <dd>神奈川</dd>
+                  </article>
+                  <article>
+                    <dt>過去</dt>
+                    <dd>未記入</dd>
+                  </article>
+                </div>
+                <p class="three" aria-hidden="true">3&nbsp;&nbsp;3&nbsp;&nbsp;3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button type="button" id="prev" aria-label="前の頁">◀ 表</button>
+        <p class="pager" aria-live="polite">
+          <span id="page-label">表紙</span>
+        </p>
+        <button type="button" id="next" aria-label="次の頁">裏 ▶</button>
+      </div>
+      <p class="hint" id="flip-hint">初期化しています…</p>
+    </div>
+
+    <footer class="site-credit">
+      <p>
+        Baseball icons (wallpaper) by
+        <a href="https://thenounproject.com/creator/hafizcreative.id/">Hafiz Nur Lutfianto</a>
+        from
+        <a href="https://thenounproject.com/browse/collection-icon/sleek-baseball-296164/">Noun Project</a>
+        (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>).
+        Role marks
+        <a href="https://lucide.dev/icons/landmark">landmark</a>,
+        <a href="https://lucide.dev/icons/square-terminal">square-terminal</a>,
+        <a href="https://lucide.dev/icons/headset">headset</a>,
+        <a href="https://lucide.dev/icons/clipboard-list">clipboard-list</a>
+        from
+        <a href="https://lucide.dev/">Lucide</a>
+        (<a href="https://lucide.dev/license">ISC</a>).
+      </p>
+    </footer>
+
+    <section class="plain" id="plain" aria-labelledby="plain-h">
+      <h2 id="plain-h">テキスト版（袋とじ）</h2>
+      <p>
+        JavaScript なし、または支援技術向けの同じ内容。事実と空欄の区別は本編と同じ。
+      </p>
+      <dl>
+        <dt>氏名</dt>
+        <dd>Koki Hata</dd>
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/shin9898">shin9898</a></dd>
+        <dt>所属</dt>
+        <dd>triplethree.inc</dd>
+        <dt>居</dt>
+        <dd>神奈川</dd>
+        <dt>いま</dt>
+        <dd>
+          飲食チェーン向け SaaS（REPORT / ONBOARDING / LIST・ENGAGEMENT / MANUAL）。Go と TypeScript / React。
+        </dd>
+        <dt>過去・成績</dt>
+        <dd>未記入。銀行などの役割も、社名が届くまで書かない。</dd>
+      </dl>
+      <ul class="plain-roles">
+        <li>
+          <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-bank" /></svg>
+          銀行
+        </li>
+        <li>
+          <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-engineer" /></svg>
+          エンジニア
+        </li>
+        <li>
+          <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-cs" /></svg>
+          CS
+        </li>
+        <li>
+          <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-pm" /></svg>
+          PM
+        </li>
+      </ul>
+    </section>
+
+    <script src="./js/vendor/page-flip.browser.js"></script>
+    <script src="./js/site.js"></script>
+  </body>
+</html>

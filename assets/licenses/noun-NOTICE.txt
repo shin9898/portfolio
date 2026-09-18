@@ -1,0 +1,44 @@
+Noun Project icons used as BACKGROUND WALLPAPER
+================================================
+
+Creator (from the baked-in download watermark on each PNG):
+  Created by Hafiz Nur Lutfianto from Noun Project
+
+Collection:
+  Sleek-Baseball
+  https://thenounproject.com/browse/collection-icon/sleek-baseball-296164/
+  Creator profile: https://thenounproject.com/creator/hafizcreative.id/
+
+License:
+  CC BY 3.0
+  https://creativecommons.org/licenses/by/3.0/
+
+These baseball line-art marks are pasted as a repeating wallpaper
+(貼り付け画像 / pattern), not as the four role UI marks.
+
+Download filenames in noun-source/ and wallpaper/glyphs/ do not match
+the depicted marks. Glyphs are the same pixels with the watermark strip
+cropped (credit is in the site footer instead). No tracing or redrawing.
+reference-wallpaper.png is a vibe reference only and is not a site asset.
+
+Displayed wallpaper:
+  assets/wallpaper/noun-baseball-tile.png
+  900×600 seamless diamond tile (period 300, stroke unchanged).
+  Both diamond sublattices filled — 12 unique cells, all 7 glyphs.
+  Glyphs sit only in the white CELL faces (not on stroke crossings).
+  Inscribed in the white diamond (L1 mask) and rotated 45° with the lattice.
+  Edge-centered cells wrap so the tile repeats without a blank.
+  CSS origin 0 0, background-attachment / position fixed.
+
+Glyph file (download name)   depicted
+--------------------------   ---------------------
+01-diamond.png               catcher (full body)
+02-player.png                ball flying to home
+03-glove.png                 scoreboard
+04-home-plate.png            infield diamond / baseball field
+05-batter.png                baseball glove
+06-catcher-mask.png          four squares + ball
+07-baseball.png              crossed bats
+
+Footer credit:
+  Baseball icons (wallpaper) by Hafiz Nur Lutfianto from Noun Project (CC BY 3.0).
