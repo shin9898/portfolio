@@ -1,21 +1,37 @@
 # Koki Hata — portfolio
 
-白表紙の個人ディスクロージャーをめくるサイト。[GitHub Pages](https://shin9898.github.io/portfolio/) 向けの静的 HTML。
+白表紙の職務経歴ディスクロージャーをめくるサイト。[GitHub Pages](https://shin9898.github.io/portfolio/) 向けの静的 HTML。v3 は人事が最初の 60 秒で読める順。**GitHub へは未 push**。
 
 - 氏名: Koki Hata
 - GitHub: [shin9898](https://github.com/shin9898)
-- 所属: triplethree.inc
+- 所属: 株式会社トリプルスリー（フルスタックエンジニア）
 
-めくりは [applied-loop](https://github.com/shin9898/applied-loop) と同じ **page-flip 2.0.7**（StPageFlip, `St.PageFlip`）。ベンダーは `js/vendor/`。見た目は applied-loop に寄せない。
+## 中身（20頁）
 
-過去の職歴・成果・野球成績はプレースホルダ。実在しない勤務先は書いていない。
+出典は本人の職務経歴書 PDF（2026年9月18日現在）、本人談、個人リポジトリのコード。書いてないことは書かない。
 
-地の線画は Noun Project Sleek-Baseball（Hafiz Nur Lutfianto, CC BY 3.0）を壁紙として貼ったもの。四役（銀行 / エンジニア / CS / PM）は Lucide（ISC、shadcn 既定）。雇用主名ではない。フッターにクレジットを置く。
+- 表紙
+- 一枚要約（誰か・いちばん強い 3 つ・数字と出した物・リンク）
+- 年表 + なぜ銀行→エンジニア（動機の作文はしない）
+- **役ごとの見開き ×5** — 左が打順、右が根拠。**3・4・5 が主**、1・2 と 6〜9 は従
+  - ① フルスタックエンジニア
+  - ② CS業務
+  - ③ ベイビー PdM 業務（プロセス: 拾う → 解消案 → 承認※ → 進行 → 顧客へ※）
+  - ④ 楽天銀行
+  - ⑤ 福岡中央銀行
+- 働き方（AI の進め方 + メモの入口を一つにする）
+- 自己PR + 奥付
+
+切った頁: 長い読み方、打順の見方、独立の成績、科目辞書、技術の独立頁。PDCA の効果数字と Obsidian プラグインは出さない。
+
+めくりは **page-flip 2.0.7**。`?page=N` で任意の頁（要約は 1、PdM は 9）。
+
+壁紙は Noun Project の野球線画（CC BY 3.0）。役のマークは Lucide（ISC）: エンジニア `square-terminal` / CS `headset` / PdM `clipboard-list` / 銀行 `landmark`。
 
 ## ローカル
 
 ```bash
-python3 -m http.server 4173
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
 [http://127.0.0.1:4173/](http://127.0.0.1:4173/) を開く。

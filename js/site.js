@@ -17,19 +17,31 @@
 
   const titles = [
     "表紙",
-    "注記",
-    "提出者",
-    "今期",
-    "科目",
-    "技術",
-    "未記入",
-    "公開",
+    "一枚要約",
+    "数字と出した物",
+    "年表",
+    "なぜ銀行→エンジニア",
+    "打順① エンジニア",
+    "根拠①",
+    "打順② CS",
+    "根拠②",
+    "打順③ PdM",
+    "根拠③",
+    "打順④ 楽天銀行",
+    "根拠④",
+    "打順⑤ 福岡中央銀行",
+    "根拠⑤",
+    "働き方 AI",
+    "働き方 メモ",
+    "自己PR",
     "奥付",
     "裏表紙",
   ];
 
   const pages = Array.from(host.querySelectorAll("[data-book-page]"));
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  // Portrait phones get a taller leaf so nine batters fit without scrolling.
+  const narrow = window.matchMedia("(max-width: 720px)").matches;
   const startPage = (function () {
     const n = Number(new URLSearchParams(window.location.search).get("page") || "0");
     if (!Number.isFinite(n) || n < 0) {
@@ -39,13 +51,13 @@
   })();
 
   const pf = new St.PageFlip(host, {
-    width: 460,
-    height: 560,
+    width: narrow ? 360 : 460,
+    height: narrow ? 660 : 560,
     size: "stretch",
     minWidth: 300,
     maxWidth: 560,
-    minHeight: 400,
-    maxHeight: 720,
+    minHeight: narrow ? 480 : 400,
+    maxHeight: narrow ? 860 : 720,
     showCover: true,
     drawShadow: true,
     flippingTime: 1250,
@@ -80,18 +92,63 @@
     stage.classList.toggle("is-closed-cover", index === 0);
   }
 
+  // In landscape the library reports the left page; the right one is visible too.
+  function visibleIndices(index) {
+    const count = pf.getPageCount();
+    let landscape = false;
+    try {
+      landscape = pf.getOrientation() === "landscape";
+    } catch (err) {
+      landscape = false;
+    }
+    if (landscape && index % 2 === 1 && index + 1 < count - 1) {
+      return [index, index + 1];
+    }
+    return [index];
+  }
+
   function paint() {
     const index = currentIndex();
     const count = pf.getPageCount();
+    const visible = visibleIndices(index);
     setCoverMode(index);
-    label.textContent = titles[index] || "頁 " + (index + 1);
+    label.textContent = visible
+      .map(function (i) {
+        return titles[i] || "頁 " + (i + 1);
+      })
+      .join(" ｜ ");
     prev.disabled = !ready || index <= 0;
     next.disabled = !ready || index >= count - 1;
     jumps.forEach(function (btn) {
       const target = Number(btn.getAttribute("data-jump"));
-      btn.classList.toggle("is-active", target === index);
+      btn.classList.toggle("is-active", visible.indexOf(target) >= 0);
       btn.disabled = !ready;
     });
+  }
+
+  // page-flip's flipPrev() uses a hard-coded x=10. In portrait the book rect
+  // starts at a negative left, so with disableFlipByClick the point is never
+  // "on a corner" and the call is silently dropped. Aim at the real corner.
+  function isPortrait() {
+    try {
+      return pf.getOrientation() === "portrait";
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function flipPrevPortraitSafe() {
+    if (!isPortrait()) {
+      pf.flipPrev("top");
+      return;
+    }
+    try {
+      const rect = pf.getBoundsRect();
+      pf.getFlipController().flip({ x: rect.left + 10, y: rect.top + 1 });
+    } catch (err) {
+      pf.turnToPrevPage();
+      paint();
+    }
   }
 
   function go(dir) {
@@ -101,7 +158,7 @@
     if (dir === "next") {
       pf.flipNext("top");
     } else {
-      pf.flipPrev("top");
+      flipPrevPortraitSafe();
     }
   }
 
@@ -110,13 +167,18 @@
       return;
     }
     const cur = currentIndex();
-    if (cur === page) {
+    if (visibleIndices(cur).indexOf(page) >= 0) {
       return;
     }
     const dist = Math.abs(page - cur);
-    if (reduce.matches || dist > 2) {
+    const backInPortrait = isPortrait() && page < cur;
+    if (reduce.matches || dist > 2 || (backInPortrait && dist > 1)) {
       pf.turnToPage(page);
       paint();
+      return;
+    }
+    if (backInPortrait) {
+      flipPrevPortraitSafe();
       return;
     }
     pf.flip(page, "top");
@@ -136,7 +198,7 @@
 
   pf.on("init", function () {
     ready = true;
-    hint.textContent = "角をつまむ。見出しとボタンでもめくれる。クリックだけではめくれない（リンクを残すため）。";
+    hint.textContent = "角をつまむ。見出しとボタン、← → キーでもめくれる。クリックだけではめくれない（リンクを残すため）。";
     if (startPage > 0) {
       try {
         pf.turnToPage(Math.min(startPage, pf.getPageCount() - 1));
