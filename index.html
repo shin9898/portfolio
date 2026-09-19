@@ -342,8 +342,11 @@
                     <p>送る・書く・採用の前で止まる</p>
                   </li>
                 </ol>
-                <p>同じ手が設計と実装と最終レビューを兼ねない。本番のデータベースは書かない。</p>
-                <p>仮説の検証痕跡は右頁。公開 ADR に残っている。案件の数字ではない。</p>
+                <p>同じ手が設計と実装と最終レビューを兼ねない。本番のデータベースは書かない。会話本文も読まない。</p>
+                <p class="field-label">試していたこと</p>
+                <p>
+                  学びの材料が届くことと、理解を確かめて次に使うことが、同じ手順で閉じるか。方式はまだ確定していない。右頁は、公開できる観察と、人が止めた判断。案件の数字ではない。
+                </p>
               </div>
             </div>
 
@@ -354,60 +357,44 @@
                   <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-harness" /></svg>
                   P.08 — AI の検証
                 </p>
-                <h2>仮説の検証痕跡</h2>
-                <p class="kicker">applied-loop の公開 ADR。設計と実行を分ける。仮説は proposed。収集の運用だけ accepted。</p>
-                <div class="compare">
-                  <article>
-                    <p class="field-label">設計</p>
-                    <ul class="deep-links">
-                      <li>
-                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">ADR-0009</a>
-                        <span>観測はメタデータだけ。会話本文は読まない</span>
-                      </li>
-                      <li>
-                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a>
-                        <span>H-JOB / H-CYCLE / H-ADAPTER / H-CACHE / H-EVAL の憲章</span>
-                      </li>
-                      <li>
-                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">ADR-0026</a>
-                        <span>自己申告を Gate の証拠にしない</span>
-                      </li>
-                      <li>
-                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0027-h-cycle-evidence-evaluation.md">ADR-0027</a>
-                        <span>H-CYCLE を論理 revision の証拠で評価する</span>
-                      </li>
-                      <li>
-                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">ADR-0028</a>
-                        <span>手動 preview は read-only</span>
-                      </li>
-                    </ul>
-                  </article>
-                  <article>
-                    <p class="field-label">実行記録</p>
+                <h2>見て、止めたこと</h2>
+                <p class="kicker">実行と設計を分ける。リンクは証拠。本文は出来事。</p>
+                <ul class="beats">
+                  <li>
+                    <h3>見たこと（実行）</h3>
                     <p>
-                      2026年8月21日の read-only 観測を
-                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a>
-                      に残し、そこから仮説を立てた。支持も反証も書いていない。件数はここへ写さない。
+                      2026年8月21日、コードと動いているデータベースを読むだけ見て残した。材料の入口は動いていた。理解を確かめて次に使うところは閉じていなかった。即時の確認は止まりうる。日次の確認は習慣として閉じていなかった。使った量の数え方は提供者ごとに違っていた。完成とは書いていない。支持も反証もない。件数は写さない。
                     </p>
+                    <p class="detail">
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">観察の記録を開く</a>
+                    </p>
+                  </li>
+                  <li>
+                    <h3>人が決めたこと（実行）</h3>
                     <p>
-                      近い誤解を自動マージしない判断は
-                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a>。
+                      近い誤解を機械がまとめる案を、実測で読んだ。重複ではなく、理解が精密になっていた。自動ではマージしない。採用は人が選ぶ。
                     </p>
+                    <p class="detail">
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">判断を開く</a>
+                    </p>
+                  </li>
+                  <li>
+                    <h3>人が決めたこと（設計）</h3>
                     <p>
-                      メタデータ収集を15分周期にしたのは
-                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">ADR-0040</a>
-                      （accepted）。仮説の支持・反証ではない。
+                      「できた」という自己申告を、採点済みの理解証拠に数えない。確認の画面は読むだけで、そこから書き込まない。会話本文は集めない。集約したメタデータを15分おきに取る運用にした。これは仮説の支持でも反証でもない。
                     </p>
-                  </article>
-                </div>
-                <p class="fn">
-                  理解ゲートの設計は
-                  <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a>。
-                  評価を合算しない設計は
-                  <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0035-harness-evaluation-next-action-proposals.md">ADR-0035</a>、
-                  <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0036-harness-evaluation-durable-run-record.md">ADR-0036</a>。
-                  案件内の差し戻しと、workbench / PdM の ADR は公開できるものがない。
-                </p>
+                    <p class="detail">
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">自己申告を証拠にしない</a>
+                      ·
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">確認は読むだけ</a>
+                      ·
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">本文は読まない</a>
+                      ·
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">15分おきに集める</a>
+                    </p>
+                  </li>
+                </ul>
+                <p class="fn">案件内の差し戻しと、workbench / PdM の公開記録はない。</p>
               </div>
             </div>
 
@@ -514,48 +501,44 @@
                 <p class="kicker">リポジトリのトップで済ませない。確認できる内容だけ。</p>
                 <ul class="deep-links">
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/README.md">applied-loop README</a>
-                    <span>学習ループの公開入口</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/README.md">学習ループの入口</a>
+                    <span>applied-loop の公開 README</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">ADR-0020</a>
-                    <span>出題停止を見て、日次教科書へ変えた判断</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">出題が止まったので、日次の教科書へ変えた</a>
+                    <span>2026年8月10日の判断</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a>
-                    <span>近い誤解を自動マージしない、人の選択</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">観察の記録</a>
+                    <span>2026年8月21日。材料は届き、理解確認は閉じていなかった。件数は写さない</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a>
-                    <span>理解ゲートの設計</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">近い誤解を自動でまとめない</a>
+                    <span>実測は重複ではなく、理解が精密になっていた。採用は人が選ぶ</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">ADR-0009</a>
-                    <span>ハーネス観測の設計。メタデータだけ</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">自己申告を理解の証拠にしない</a>
+                    <span>門を通した回答だけを数える</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a>
-                    <span>仮説憲章と、2026-08-21 の観測</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">確認の画面は読むだけ</a>
+                    <span>そこから書き込まない</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">ADR-0026</a>
-                    <span>自己申告を Gate の証拠にしない</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">会話本文は読まない</a>
+                    <span>集めるのはメタデータだけ</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0027-h-cycle-evidence-evaluation.md">ADR-0027</a>
-                    <span>H-CYCLE 評価の設計</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">15分おきに集める</a>
+                    <span>仮説の支持・反証ではない</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">ADR-0028</a>
-                    <span>H-CYCLE の手動 preview は read-only</span>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">理解の門</a>
+                    <span>確認してから次へ進む設計</span>
                   </li>
                   <li>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">ADR-0040</a>
-                    <span>収集を15分周期にした（accepted）</span>
-                  </li>
-                  <li>
-                    <a href="https://github.com/shin9898/portfolio/blob/main/index.html">portfolio / index.html</a>
-                    <span>この本のソース</span>
+                    <a href="https://github.com/shin9898/portfolio/blob/main/index.html">この本のソース</a>
+                    <span>portfolio / index.html</span>
                   </li>
                 </ul>
               </div>
@@ -675,20 +658,18 @@
         </dd>
         <dt>AI の検証</dt>
         <dd>
-          Claude が設計、Codex が実装、CodeRabbit がレビュー。人が送る・書く・採用の前で止まる。
-          仮説の検証痕跡は applied-loop の公開 ADR。設計は
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">ADR-0009</a>、
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a>、
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">ADR-0026</a>、
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0027-h-cycle-evidence-evaluation.md">ADR-0027</a>、
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">ADR-0028</a>、
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0035-harness-evaluation-next-action-proposals.md">ADR-0035</a>、
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0036-harness-evaluation-durable-run-record.md">ADR-0036</a>。
-          実行記録は ADR-0025 の 2026年8月21日 read-only 観測（仮説は proposed。件数は写さない）、
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a>、
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">ADR-0040</a>
-          （収集の運用。accepted。仮説の支持・反証ではない）。
-          案件内の差し戻しと、workbench / PdM の ADR は公開できるものがない。
+          Claude が設計、Codex が実装、CodeRabbit がレビュー。人が送る・書く・採用の前で止まる。同じ手が兼ねない。本番のデータベースは書かない。会話本文も読まない。
+          試していたこと: 学びの材料が届くことと、理解を確かめて次に使うことが、同じ手順で閉じるか。方式はまだ確定していない。
+          見たこと（実行）: 2026年8月21日、コードと動いているデータベースを読むだけ見て残した。材料の入口は動いていた。理解確認から再出題・適用までは閉じていなかった。即時の確認は止まりうる。日次の確認は習慣として閉じていなかった。使った量の見え方は提供者ごとに数え方が違っていた。一つの率で良くなったとは書いていない。支持も反証も書いていない。件数は写さない。
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">観察の記録を開く</a>。
+          人が決めたこと（実行）: 近い誤解を機械がまとめる案を実測で読んだ。重複ではなく理解が精密になっていた。自動ではマージしない。採用は人が選ぶ。
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">判断を開く</a>。
+          人が決めたこと（設計）: 自己申告を採点済みの理解証拠に数えない。確認画面は読むだけ。会話本文は集めない。メタデータを15分おきに取る。仮説の支持・反証ではない。
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">自己申告を証拠にしない</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">確認は読むだけ</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">本文は読まない</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">15分おきに集める</a>。
+          案件内の差し戻しと、workbench / PdM の公開記録はない。
         </dd>
         <dt>顧客の声</dt>
         <dd>
@@ -703,18 +684,15 @@
         </dd>
         <dt>証拠</dt>
         <dd>
-          <a href="https://github.com/shin9898/applied-loop/blob/main/README.md">README</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">ADR-0020</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">ADR-0009</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">ADR-0026</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0027-h-cycle-evidence-evaluation.md">ADR-0027</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">ADR-0028</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0035-harness-evaluation-next-action-proposals.md">ADR-0035</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0036-harness-evaluation-durable-run-record.md">ADR-0036</a> ·
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">ADR-0040</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/README.md">学習ループの入口</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">日次の教科書へ変えた</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">観察の記録</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">自動でまとめない</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">自己申告を証拠にしない</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">確認は読むだけ</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">本文は読まない</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">15分おきに集める</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">理解の門</a> ·
           <a href="https://github.com/shin9898/portfolio/blob/main/index.html">この本のソース</a>
         </dd>
         <dt>連絡</dt>
