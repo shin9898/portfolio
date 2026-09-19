@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Koki Hata — 仕組みと、仕事の1話</title>
+    <title>Koki Hata — フルスタック</title>
     <meta
       name="description"
-      content="Koki Hata（GitHub: shin9898）。銀行2社 約8年 → 飲食 SaaS フルスタック。自分で回している仕組みと、責任を取った仕事 1 話。職務経歴書の写しではない。"
+      content="Koki Hata（GitHub: shin9898）。銀行約8年 → 飲食多店舗向けSaaS のフルスタック。顧客の声を開発につなぎ、開発基盤とAIの検証手順を自分で整える。"
     />
     <meta name="author" content="Koki Hata" />
     <link rel="canonical" href="https://shin9898.github.io/portfolio/" />
-    <meta property="og:title" content="Koki Hata — 仕組みと、仕事の1話" />
+    <meta property="og:title" content="Koki Hata — フルスタック" />
     <meta
       property="og:description"
-      content="銀行約8年 → 飲食 SaaS。workbench / AI ハーネス / ベイビー PdM / この本。仕事は ONBOARDING リニューアルの 1 話。"
+      content="銀行約8年 → 飲食多店舗向けSaaS。ONBOARDING の土台、workbench、AI の検証手順、顧客の声。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://shin9898.github.io/portfolio/" />
@@ -77,579 +77,424 @@
       </symbol>
     </svg>
 
-    <a class="skip" href="#plain">テキスト版へ</a>
+    <nav class="skip-bar" aria-label="近道">
+      <a href="#plain-overview" data-jump="1">概要へ</a>
+      <a href="#plain">テキスト版へ</a>
+    </nav>
 
     <header class="mast">
-      <p class="mast-kicker">ポートフォリオ · 仕組みと、仕事の1話 · 職務経歴書の写しではない</p>
-      <p class="mast-id">GitHub shin9898</p>
+      <p class="mast-kicker">ポートフォリオ</p>
+      <p class="mast-id">
+        <a href="https://github.com/shin9898">GitHub shin9898</a>
+      </p>
       <h1 class="mast-title">
         Koki Hata
         <span class="mast-title-sub">ディスクロージャー</span>
       </h1>
       <p class="mast-lede">
-        最初の見開きで<strong>だれか・自分で回しているもの・連絡先</strong>。仕事は判断が見える<strong>1話</strong>だけ。得意は打順の<strong>3・4・5</strong>。
+        銀行約8年 → 飲食多店舗向けSaaS のフルスタック。概要から、事例と連絡先へ。
       </p>
     </header>
 
     <div class="desk">
       <nav class="toc" aria-label="頁の見出し">
         <button type="button" data-jump="0">表紙</button>
-        <button type="button" data-jump="1">だれか</button>
-        <span class="toc-group" role="group" aria-label="自分で回しているもの">
-          <span class="toc-group-label">仕組み</span>
-          <button type="button" data-jump="3">
-            <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-workbench" /></svg>
-            workbench
-          </button>
-          <button type="button" data-jump="5">
-            <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-harness" /></svg>
-            ハーネス
-          </button>
-          <button type="button" data-jump="7">
-            <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-pdm" /></svg>
-            PdM
-          </button>
-          <button type="button" data-jump="9">
-            <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-book" /></svg>
-            この本
-          </button>
-        </span>
-        <button type="button" data-jump="11">
+        <button type="button" data-jump="1">概要</button>
+        <button type="button" data-jump="3">
           <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-story" /></svg>
-          1話
+          ONBOARDING
         </button>
+        <button type="button" data-jump="5">
+          <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-workbench" /></svg>
+          workbench
+        </button>
+        <button type="button" data-jump="7">
+          <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-harness" /></svg>
+          検証
+        </button>
+        <button type="button" data-jump="9">
+          <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-pdm" /></svg>
+          顧客の声
+        </button>
+        <button type="button" data-jump="11">
+          <svg class="toc-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-book" /></svg>
+          この本
+        </button>
+        <button type="button" data-jump="13">証拠</button>
         <button type="button" data-jump="14">連絡</button>
       </nav>
 
       <div class="stage" id="stage">
         <div class="mount is-showing-cover" id="mount">
-          <div class="book" id="book" aria-label="仕組みと、仕事の1話">
+          <div class="book" id="book" aria-label="Koki Hata ポートフォリオ">
             <!-- 0 表紙 -->
             <div class="leaf leaf-cover" data-book-page data-density="hard">
-              <div class="cover">
-                <p class="cover-kicker">ポートフォリオ · 2026年9月18日現在</p>
+              <div class="cover cover-simple">
+                <p class="cover-kicker">ポートフォリオ · 2026年9月19日現在</p>
                 <h2 class="cover-title">Koki<br />Hata</h2>
                 <p class="cover-sub">フルスタックエンジニア · 株式会社トリプルスリー</p>
-                <p class="cover-lede">銀行2社 約8年 → 飲食 SaaS。<br />自分で回す仕組みと、リニューアルの土台を揃えた1話。</p>
-                <dl class="cols">
-                  <div>
-                    <dt>現在</dt>
-                    <dd>トリプルスリー<small>2025〜 · 開発</small></dd>
-                    <dt>いちばん強い</dt>
-                    <dd>仕組みを敷く<small>モノレポとハーネス</small></dd>
-                  </div>
-                  <div>
-                    <dt>前歴</dt>
-                    <dd>銀行2社 約8年<small>福岡中央 → 楽天</small></dd>
-                    <dt>仕事の1話</dt>
-                    <dd>ONBOARDING<small>土台を揃える</small></dd>
-                  </div>
-                  <div>
-                    <dt>仕組み</dt>
-                    <dd>workbench · ハーネス<small>PdM · この本</small></dd>
-                    <dt>GitHub</dt>
-                    <dd>shin9898</dd>
-                  </div>
-                </dl>
-                <p class="cover-legend">
-                  <span>1・2 土台</span>
-                  <span class="is-strong">3・4・5 いちばん強い</span>
-                  <span>6〜9 支え</span>
-                </p>
+                <p class="cover-lede">銀行約8年 → 飲食多店舗向けSaaS。</p>
+                <button type="button" class="cover-cta" data-jump="1">概要を見る</button>
                 <p class="three" aria-hidden="true">3&nbsp;&nbsp;3&nbsp;&nbsp;3</p>
-                <p class="cover-hint">角をつまむ · ボタンでもめくれる</p>
+                <p class="cover-hint">角をつまむ · ボタンでもめくれる。めくりは必須ではない。</p>
               </div>
             </div>
 
-            <!-- 1 だれか -->
+            <!-- 1 60秒の結論 -->
             <div class="leaf" data-book-page>
               <div class="sheet sheet-summary">
                 <p class="running">
-                  <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="銀行から"><title>銀行から</title><use href="#mark-bank" /></svg>
-                  P.01 — だれか
+                  <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="経歴"><title>経歴</title><use href="#mark-bank" /></svg>
+                  P.01 — 60秒
                 </p>
                 <p class="field-label">だれか</p>
                 <p class="legal-name">Koki Hata</p>
-                <p class="identity">銀行で顧客を見ていた人が、<br />飲食 SaaS を作り、仕組みを自分で回す。</p>
-                <p class="kicker">フルスタックエンジニア · 株式会社トリプルスリー（正社員 2025.10〜）</p>
-                <p class="field-label">人事の 60 秒</p>
-                <ol class="howto">
-                  <li><b>だれか</b> — この頁。銀行約8年 → 飲食 SaaS フルスタック</li>
-                  <li><b>自分で回しているもの</b> — 右頁の4つ</li>
-                  <li><b>仕事で責任を取った話 1件</b> — P.11 ONBOARDING リニューアル</li>
-                  <li><b>連絡先</b> — P.14。右頁の下にも</li>
+                <p class="identity">銀行2社 約8年 → 飲食多店舗向けSaaS のフルスタック。株式会社トリプルスリー。</p>
+                <p class="field-label">得意</p>
+                <ol class="hero-three">
+                  <li>
+                    <span class="bat-no">3</span>
+                    <div>
+                      <p class="hero-name">顧客の声を、開発の案にする</p>
+                      <p class="hero-note">ベイビー PdM · 2026年7月〜</p>
+                      <button type="button" class="inline-jump" data-jump="9">P.09–10 へ</button>
+                    </div>
+                  </li>
+                  <li class="is-four">
+                    <span class="bat-no">4</span>
+                    <div>
+                      <p class="hero-name">分かれた開発の土台を整える</p>
+                      <p class="hero-note">ONBOARDING</p>
+                      <button type="button" class="inline-jump" data-jump="3">P.03–04 へ</button>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="bat-no">5</span>
+                    <div>
+                      <p class="hero-name">AIを、人が検証できる手順で使う</p>
+                      <p class="hero-note">workbench とハーネス</p>
+                      <button type="button" class="inline-jump" data-jump="5">P.05–08 へ</button>
+                    </div>
+                  </li>
                 </ol>
-                <p class="path-line">
-                  <b>一本の線</b>
-                  福岡中央 → 楽天銀行 → リスキリング
-                  <span class="mark">※未</span>
-                  → トリプルスリー
-                </p>
-                <p class="fn">
-                  在籍欄の正社員は 2025年10月〜。要約と REPORT は 2025年8月〜。8〜9月の雇用形態は
-                  <span class="mark">※未</span>。ベイビー PdM は 2026.07〜、指名なし
-                  <span class="mark">※本人談</span>。職歴の目次はこの本にない。
+                <p class="jump-row">
+                  <button type="button" class="inline-jump" data-jump="14">連絡へ</button>
+                  <a href="https://github.com/shin9898">GitHub shin9898</a>
                 </p>
               </div>
             </div>
 
-            <!-- 2 仕組み4つ -->
+            <!-- 2 証拠 -->
             <div class="leaf" data-book-page>
               <div class="sheet">
-                <p class="running">P.02 — 自分で回しているもの</p>
-                <h2>差別化は、公開できる仕組み側</h2>
-                <p class="kicker">チケット一覧では差がつかない。次の見開きから1つずつ。</p>
-                <ul class="systems">
-                  <li>
-                    <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="workbench"><title>workbench</title><use href="#mark-workbench" /></svg>
-                    <h3>workbench</h3>
-                    <p>skills / hooks / cron / 学習ループ。Claude · Codex · Cursor で共用。</p>
-                  </li>
-                  <li>
-                    <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="AI ハーネス"><title>AI ハーネス</title><use href="#mark-harness" /></svg>
-                    <h3>AI ハーネス</h3>
-                    <p>Claude → Codex → CodeRabbit。送る・書く・採用の前に人が止まる。</p>
-                  </li>
-                  <li>
-                    <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="ベイビー PdM"><title>ベイビー PdM</title><use href="#mark-pdm" /></svg>
-                    <h3>ベイビー PdM</h3>
-                    <p>2026.07〜 · 肩書なし。拾う→案→承認→進行→届ける。</p>
-                  </li>
-                  <li>
-                    <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="このめくり本"><title>このめくり本</title><use href="#mark-book" /></svg>
-                    <h3>このめくり本</h3>
-                    <p>職務経歴書の写しではない。見せられる証拠と、空欄のままの注記。</p>
-                  </li>
-                </ul>
-                <ul class="contact contact-compact">
-                  <li>GitHub <a href="https://github.com/shin9898">shin9898</a></li>
-                  <li>この本 <a href="https://shin9898.github.io/portfolio/">shin9898.github.io/portfolio</a></li>
-                </ul>
-                <p class="fn">得意の見せ方は打順。職歴の目次にはしない。3・4・5 がいちばん強い。</p>
+                <p class="running">P.02 — 証拠</p>
+                <h2>仕事の1話と、確かめられる変化</h2>
+                <p class="kicker">ONBOARDING リニューアル。詳細は次の見開き。</p>
+                <p class="lead">
+                  分かれていた開発を npm workspaces の1リポにした。従業員は LIFF、管理者は Web。旧データ移行は未着手。案件で AI を使う手順を移植した。
+                </p>
+                <article class="proof">
+                  <p class="field-label">代表証拠</p>
+                  <p class="proof-head">4リポ → npm workspaces の1リポ</p>
+                  <p>構成の変化まで。開発速度の変化は書いていない。</p>
+                </article>
+                <p class="jump-row">
+                  <button type="button" class="inline-jump" data-jump="3">ONBOARDING P.03–04</button>
+                  <button type="button" class="inline-jump" data-jump="14">連絡</button>
+                </p>
               </div>
             </div>
 
-            <!-- 3 workbench 打順 -->
+            <!-- 3 ONBOARDING 問題・判断 -->
             <div class="leaf" data-book-page>
-              <div class="sheet sheet-lineup">
+              <div class="sheet">
+                <p class="running">
+                  <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="ONBOARDING"><title>ONBOARDING</title><use href="#mark-story" /></svg>
+                  P.03 — ONBOARDING
+                </p>
+                <h2>分かれた開発の土台を整える</h2>
+                <p class="kicker">ONBOARDING · 2025年12月〜。同じリニューアルの四つの論点。担当の境界は書いていない。</p>
+                <ul class="story">
+                  <li>
+                    <p class="story-phase">問題</p>
+                    <h3>土台が4つに分かれていた</h3>
+                    <p>リポは4つ。従業員は LIFF、管理者は Web。旧 MANUAL のデータは型がまったく違う。案件で AI を使う手順も、まだ揃っていなかった。</p>
+                  </li>
+                  <li>
+                    <p class="story-phase">判断</p>
+                    <h3>公開できる判断は、一つに束ねたこと</h3>
+                    <p>4リポを npm workspaces で一つにした。連結で何をどこにつないだか、移行の次の一手、案件内の役割分担は書いていない。</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 4 ONBOARDING 結果・いま -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
+                <p class="running">
+                  <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-story" /></svg>
+                  P.04 — ONBOARDING
+                </p>
+                <h2>一つにした。移行は未着手</h2>
+                <ul class="story">
+                  <li>
+                    <p class="story-phase">結果</p>
+                    <div class="mono-diagram" aria-label="4リポから1リポ">
+                      <div class="mono-from">
+                        <span>リポ</span>
+                        <span>リポ</span>
+                        <span>リポ</span>
+                        <span>リポ</span>
+                      </div>
+                      <span class="mono-arrow" aria-hidden="true">→</span>
+                      <div class="mono-to">npm workspaces<br />1リポ</div>
+                    </div>
+                    <p>ハーネスを移植・整備した。面は LIFF と Web。連結で可能になった操作と、開発速度の変化は書いていない。</p>
+                  </li>
+                  <li>
+                    <p class="story-phase">いま</p>
+                    <h3>データ移行は未着手</h3>
+                    <p>旧 MANUAL からの移行は、まだ始めていない。次の判断は未定。</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 5 workbench 流れ -->
+            <div class="leaf" data-book-page>
+              <div class="sheet">
                 <p class="running">
                   <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="workbench"><title>workbench</title><use href="#mark-workbench" /></svg>
-                  P.03 — workbench
+                  P.05 — workbench
                 </p>
-                <h2>workbench</h2>
-                <p class="kicker">個人リポジトリ · 2026.04〜 · Claude / Codex / Cursor 共用</p>
-                <ol class="lineup">
-                  <li class="bat">
-                    <span class="bat-no">1</span>
-                    <span class="bat-skill">入口を一つにする</span>
-                    <span class="bat-note">my-copy を3ランタイムで共用</span>
+                <h2>workbench がどう回るか</h2>
+                <p class="kicker">個人環境 · 2026年4月〜 · Claude / Codex / Cursor で共用</p>
+                <ol class="flow" aria-label="全体の流れ">
+                  <li>
+                    <h3>skills</h3>
+                    <p>手順を固定する</p>
                   </li>
-                  <li class="bat">
-                    <span class="bat-no">2</span>
-                    <span class="bat-skill">手順を skill に固定</span>
-                    <span class="bat-note">84 skills</span>
+                  <li>
+                    <h3>hooks</h3>
+                    <p>同じ契約で止める</p>
                   </li>
-                  <li class="bat is-cleanup is-cleanup-start">
-                    <span class="bat-no">3</span>
-                    <span class="bat-skill">hooks を同じ契約にする</span>
-                    <span class="bat-note">SessionStart から Stop まで、3ランタイムで共有</span>
+                  <li>
+                    <h3>cron</h3>
+                    <p>短い周期を回す</p>
                   </li>
-                  <li class="bat is-cleanup is-four">
-                    <span class="bat-no">4</span>
-                    <span class="bat-skill">短い周期を機械が回す</span>
-                    <span class="bat-note">cron 13本。朝の briefing、週次、日曜の昇格</span>
-                  </li>
-                  <li class="bat is-cleanup is-cleanup-end">
-                    <span class="bat-no">5</span>
-                    <span class="bat-skill">学びを知識へ昇格する</span>
-                    <span class="bat-note">日記 → 週次で一般化 → 索引。次に引ける形</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">6</span>
-                    <span class="bat-skill">CI</span>
-                    <span class="bat-note">外部 MCP に繋がない</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">7</span>
-                    <span class="bat-skill">安全装置</span>
-                    <span class="bat-note">PII と本番 DB 書き込みを hook で止める</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">8</span>
-                    <span class="bat-skill">計測</span>
-                    <span class="bat-note">使った量と経路を数字で見る</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">9</span>
-                    <span class="bat-skill">正典は vault 一本</span>
-                    <span class="bat-note">本体は未読。操作するコードだけ読んだ</span>
+                  <li>
+                    <h3>学習</h3>
+                    <p>次の手順に残す</p>
                   </li>
                 </ol>
-                <p class="fn">3・4・5 がいちばん強い。中身は右頁 →</p>
+                <p>SessionStart から Stop までを3つの実行環境で共有する。朝の briefing、週次、学びの昇格を機械が回す。</p>
               </div>
             </div>
 
-            <!-- 4 workbench 中身 -->
+            <!-- 6 workbench 1例 -->
             <div class="leaf" data-book-page>
               <div class="sheet">
                 <p class="running">
                   <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-workbench" /></svg>
-                  P.04 — workbench
+                  P.06 — workbench
                 </p>
-                <h2>skills / hooks / cron / 学習</h2>
-                <p class="kicker">skill 名のカタログではない。契約だけ。</p>
-                <ul class="beats">
-                  <li>
-                    <h3>共用する</h3>
-                    <p>my-copy は Claude / Codex / Cursor で同じ。84 skills、114 Python modules、13 cron。</p>
-                    <p class="detail">SessionStart / UserPromptSubmit / PreToolUse / PostToolUse / Stop を配線。Claude だけが persona と定期便の writer <span class="src">workbench: my-copy/</span></p>
-                  </li>
-                  <li>
-                    <h3>短い周期</h3>
-                    <p>朝に翌日の CS を出し、週次で調査し、日曜に学びを昇格する。</p>
-                    <p class="detail">launchd cron。人が書く範囲はテンプレで固定 <span class="src">workbench: my-copy/scheduled-tasks/</span></p>
-                  </li>
-                  <li>
-                    <h3>次に引ける形</h3>
-                    <p>日記の Discovery / Context / Lesson → 一般化ノート → 症状索引。</p>
-                    <p class="detail">公開の足跡は applied-loop。vault 本体 koki-central はローカルのみで未読 <span class="src">llm-config: auto-learning.md</span></p>
-                  </li>
-                </ul>
-                <p class="fn">1,214 commits（2026-04-09〜09-17）。作者の 98% が koki。CI は外部 MCP と個人データに接続しない。</p>
+                <h2>学びが、次の手順になった例</h2>
+                <p class="kicker">設計資料と、公開されている判断を分ける。</p>
+                <article class="proof">
+                  <p class="field-label">公開できる実行の1件</p>
+                  <p class="proof-head">出題が止まったので、日次の教科書に変えた</p>
+                  <p>
+                    2026年8月10日、未回答の確認が上限に達し、新しい commit では出題だけが止まった。イベントは届いていた。全部貯めて1日の終わりに圧縮し、確認のあと翌日を進める形へ変えた。
+                  </p>
+                  <p>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">applied-loop ADR-0020</a>
+                  </p>
+                </article>
+                <p class="fn">これは公開リポジトリの判断記録。個人環境の日記そのものは、ここには置いていない。</p>
               </div>
             </div>
 
-            <!-- 5 ハーネス 打順 -->
+            <!-- 7 ハーネス -->
             <div class="leaf" data-book-page>
-              <div class="sheet sheet-lineup">
+              <div class="sheet">
                 <p class="running">
                   <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="AI ハーネス"><title>AI ハーネス</title><use href="#mark-harness" /></svg>
-                  P.05 — AI ハーネス
+                  P.07 — AI の検証
                 </p>
-                <h2>AI は速くする。止まれる人を残す</h2>
-                <p class="kicker">道具の一覧ではない。役をまたぐ進め方</p>
-                <ol class="lineup">
-                  <li class="bat">
-                    <span class="bat-no">1</span>
-                    <span class="bat-skill">モデル名を文書に複製しない</span>
-                    <span class="bat-note">registry から引く</span>
+                <h2>AIを、人が検証できる手順で使う</h2>
+                <p class="kicker">道具の紹介ではない。誰が設計し、誰が書き、誰が止めると決めるか。</p>
+                <ol class="flow" aria-label="役割の順">
+                  <li>
+                    <h3>Claude</h3>
+                    <p>設計する</p>
                   </li>
-                  <li class="bat">
-                    <span class="bat-no">2</span>
-                    <span class="bat-skill">適格性を記録してから使う</span>
-                    <span class="bat-note">使ってよい、の記録</span>
+                  <li>
+                    <h3>Codex</h3>
+                    <p>実装する</p>
                   </li>
-                  <li class="bat is-cleanup is-cleanup-start">
-                    <span class="bat-no">3</span>
-                    <span class="bat-skill">設計・実装・レビューを兼ねない</span>
-                    <span class="bat-note">Claude → Codex → CodeRabbit</span>
+                  <li>
+                    <h3>CodeRabbit</h3>
+                    <p>レビューする</p>
                   </li>
-                  <li class="bat is-cleanup is-four">
-                    <span class="bat-no">4</span>
-                    <span class="bat-skill">人が止まれる</span>
-                    <span class="bat-note">送る・書く・採用する前に、人が確認する</span>
-                  </li>
-                  <li class="bat is-cleanup is-cleanup-end">
-                    <span class="bat-no">5</span>
-                    <span class="bat-skill">判断を残す</span>
-                    <span class="bat-note">課題設定とリリース判定は、人が検証できる形に</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">6</span>
-                    <span class="bat-skill">Codex は sealed patch で委譲</span>
-                    <span class="bat-note">SHA-256 の manifest</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">7</span>
-                    <span class="bat-skill">見逃しを別モデルで見る</span>
-                    <span class="bat-note">同一モデルの再実行は「ブレ」でしかない</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">8</span>
-                    <span class="bat-skill">本番 DB は書かない</span>
-                    <span class="bat-note">hook で止める</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">9</span>
-                    <span class="bat-skill">月次で経路を見直す</span>
-                    <span class="bat-note">使った量と route</span>
+                  <li>
+                    <h3>人</h3>
+                    <p>送る・書く・採用の前で止まる</p>
                   </li>
                 </ol>
-                <p class="fn">3・4・5 がいちばん強い。ゲートは右頁 →</p>
+                <p>同じ手が設計と実装と最終レビューを兼ねない。本番のデータベースは書かない。</p>
               </div>
             </div>
 
-            <!-- 6 ハーネス ゲート -->
+            <!-- 8 検証記録 -->
             <div class="leaf" data-book-page>
               <div class="sheet">
                 <p class="running">
                   <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-harness" /></svg>
-                  P.06 — AI ハーネス
+                  P.08 — AI の検証
                 </p>
-                <h2>役割を分ける。人が止まる</h2>
-                <p class="kicker">自己PR「速さは AI、責任は人」と同じ。PDF と個人リポ。</p>
-                <ul class="beats">
-                  <li>
-                    <h3>役割を分ける</h3>
-                    <p>設計・実装・レビューを、同じ手が兼ねない。</p>
-                    <p class="detail">Claude が設計 → Codex が実装 → CodeRabbit がレビュー。同一セッションが実装者と最終 reviewer を兼ねない <span class="src">workbench: skills/route-dev-workflow</span></p>
-                  </li>
-                  <li>
-                    <h3>人が止まれる</h3>
-                    <p>CS の返信は案まで。顧客の声の抽出は読み取り専用。本番 DB は書かない。PdM では AI 提案を人がゲート。</p>
-                    <p class="detail">PII 混入は failClosed。キルスイッチ表あり <span class="src">workbench: my-copy/scripts/pii_guard.py</span></p>
-                  </li>
-                  <li>
-                    <h3>判断を残す</h3>
-                    <p>課題設定・レビュー・テスト・CI・リリース判定は、人が検証できる形に。</p>
-                    <p class="detail">一次レビュアーの見逃しは、別モデルで月次サンプリング。同じモデルの再実行は「ブレ」でしかない、と明記 <span class="src">workbench: review-blindspot-audit</span></p>
-                  </li>
-                </ul>
-                <p class="fn">ハーネスは Claude / Codex / Cursor で共用。ツール名の羅列はしない。</p>
+                <h2>人が差し戻した記録</h2>
+                <p class="kicker">案件内の Claude → Codex → CodeRabbit の差し戻しは、公開できるものがない。下は公開リポジトリの1件。</p>
+                <article class="proof">
+                  <p class="field-label">公開できる検証の1件</p>
+                  <p class="proof-head">近い誤解を、自動ではマージしない</p>
+                  <p>
+                    意味の近い誤解を機械がまとめる案に対し、実測を読んだところ重複ではなく精緻化だった。自動マージはしない。採用は人が選ぶ。
+                  </p>
+                  <p>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">applied-loop ADR-0021</a>
+                  </p>
+                </article>
+                <p class="fn">
+                  理解ゲートの設計は
+                  <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a>。
+                </p>
               </div>
             </div>
 
-            <!-- 7 ベイビー PdM 打順 -->
+            <!-- 9 顧客の声 -->
             <div class="leaf" data-book-page>
-              <div class="sheet sheet-lineup">
+              <div class="sheet">
                 <p class="running">
-                  <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="ベイビー PdM 業務"><title>ベイビー PdM 業務</title><use href="#mark-pdm" /></svg>
-                  P.07 — ベイビー PdM
+                  <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="顧客の声"><title>顧客の声</title><use href="#mark-pdm" /></svg>
+                  P.09 — 顧客の声
                 </p>
-                <h2>ベイビー PdM 業務 <small class="h2-sub">2026.07〜 · 自発 · 肩書なし</small></h2>
-                <p class="kicker">指名はない。ボトルネックだった「顧客の声」を、拾ってから届けるまで自ら敷く <span class="mark">※本人談</span></p>
-                <ol class="process" aria-label="プロセス">
-                  <li>拾う</li>
+                <h2>顧客の声を、開発の判断へ</h2>
+                <p class="kicker">ベイビー PdM · 2026年7月〜 · 指名なし。肩書ではない。</p>
+                <ol class="process" aria-label="声から提供までの順">
+                  <li>声</li>
                   <li>案</li>
-                  <li class="is-pending">承認 <span class="mark">※本人追記待ち</span></li>
+                  <li>承認</li>
                   <li>進行</li>
-                  <li class="is-pending">届ける <span class="mark">※本人追記待ち</span></li>
+                  <li>提供</li>
                 </ol>
-                <ol class="lineup">
-                  <li class="bat">
-                    <span class="bat-no">1</span>
-                    <span class="bat-skill">声を拾う入口</span>
-                    <span class="bat-note">議事録・Slack・失注を製品別に束ねる</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">2</span>
-                    <span class="bat-skill">仕分ける</span>
-                    <span class="bat-note">原文・解釈・人の判断を混ぜない</span>
-                  </li>
-                  <li class="bat is-cleanup is-cleanup-start">
-                    <span class="bat-no">3</span>
-                    <span class="bat-skill">解消案にする</span>
-                    <span class="bat-note">課題を仕様にする。数字で優先を動かす</span>
-                  </li>
-                  <li class="bat is-cleanup is-four">
-                    <span class="bat-no">4</span>
-                    <span class="bat-skill">進行の契約を敷く</span>
-                    <span class="bat-note">声 → 判断 → Issue → 出荷、の型をコードに</span>
-                  </li>
-                  <li class="bat is-cleanup is-cleanup-end">
-                    <span class="bat-no">5</span>
-                    <span class="bat-skill">現場に渡す</span>
-                    <span class="bat-note">CS 兼務で、運用に乗る形で返す</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">6</span>
-                    <span class="bat-skill">見える化</span>
-                    <span class="bat-note">台帳と、月次・週次の数字</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">7</span>
-                    <span class="bat-skill">承認のゲート設計</span>
-                    <span class="bat-note">AI の提案を人が止める。個別決裁は右頁</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">8</span>
-                    <span class="bat-skill">原文と解釈を混ぜない</span>
-                    <span class="bat-note">分類はコードが導出</span>
-                  </li>
-                  <li class="bat">
-                    <span class="bat-no">9</span>
-                    <span class="bat-skill">人が検証できる形に</span>
-                    <span class="bat-note">課題設定とリリース判定</span>
-                  </li>
-                </ol>
-                <p class="fn">件数より、この順で回したかが要点。中身は右頁 →</p>
+                <p>議事録・Slack・失注を製品別に束ね、原文と解釈と人の判断を分けて案にする。声から Issue までの型をコードに置いている。</p>
+                <p>承認の個別記録と、声が機能として届いた対応は、この本には置いていない。全工程が回っている、とは書いていない。</p>
               </div>
             </div>
 
-            <!-- 8 PdM 中身 -->
+            <!-- 10 到達地点 -->
             <div class="leaf" data-book-page>
-              <div class="sheet sheet-evidence">
+              <div class="sheet">
                 <p class="running">
                   <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-pdm" /></svg>
-                  P.08 — ベイビー PdM
+                  P.10 — 顧客の声
                 </p>
-                <h2>拾う → 案 → 進行。承認と到達は枠</h2>
-                <p class="kicker">自発 · 肩書なし。プロダクト業務の目次ではない。</p>
-                <div class="jobs">
-                  <article class="job is-key">
-                    <header class="job-head">
-                      <p class="job-period">2026.07〜</p>
-                      <h3>ベイビー PdM</h3>
-                      <p class="job-role">声の入口と進行の契約を、自ら敷く</p>
-                    </header>
-                    <ul>
-                      <li>議事録・Slack・失注を製品別に束ね、発話単位で拾う</li>
-                      <li>原文 / 解釈 / 人の判断を分けて仕分ける。分類はコードが導出</li>
-                      <li>声 → 判断 → Issue → 出荷の型をコードに。AI 提案は人が止める</li>
-                      <li>個別の決裁記録と、声→提供の対応表は <span class="mark">※本人追記待ち</span></li>
-                    </ul>
-                  </article>
-                  <article class="job">
-                    <header class="job-head">
-                      <p class="job-period">記録がある段</p>
-                      <h3>案と進行</h3>
-                      <p class="job-role">3番と4番。承認と届けるは枠だけ</p>
-                    </header>
-                    <ul>
-                      <li>CS の課題を仕様にして開発へ。現場に渡す</li>
-                      <li>いちばん追う数字の 3 か月で、優先を 1 件入れ替え</li>
-                      <li>pdm-system: JSON Schema、XState の人間ゲート、Issue の read-only 取得</li>
-                    </ul>
-                  </article>
-                </div>
-                <p class="fn">参考件数: 要望 Inbox 139件中 121件を起票（要点は入口）。見出しにしない。<span class="src">workbench: voc-triage · pdm-system · ADR-0021</span></p>
+                <h2>いまの到達地点</h2>
+                <p class="kicker">自発。入口と進行の型まで。</p>
+                <ul class="beats">
+                  <li>
+                    <h3>ある</h3>
+                    <p>声の入口。仕分け。課題を仕様にする。進行の契約。AI の提案を人が止める型。</p>
+                  </li>
+                  <li>
+                    <h3>ない</h3>
+                    <p>承認した個別案件の公開記録。この声がこの機能になった、という対応表。</p>
+                  </li>
+                </ul>
+                <p class="fn">社内の件数は載せていない。</p>
               </div>
             </div>
 
-            <!-- 9 このめくり本 -->
+            <!-- 11 この本 -->
             <div class="leaf" data-book-page>
               <div class="sheet">
                 <p class="running">
                   <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="このめくり本"><title>このめくり本</title><use href="#mark-book" /></svg>
-                  P.09 — このめくり本
+                  P.11 — この本
                 </p>
-                <h2>職務経歴書の写しではない</h2>
-                <p class="kicker">職歴の正本は Findy / PDF。こちらは見せられる証拠と、自分で回している仕組み。</p>
+                <h2>めくりは演出。閲覧の必須ではない</h2>
                 <ul class="beats">
                   <li>
-                    <h3>60 秒で4点</h3>
-                    <p>だれか。自分で回しているもの。仕事で責任を取った話 1件。連絡先。</p>
+                    <h3>概要へ1操作</h3>
+                    <p>表紙の「概要を見る」、または上の「概要へ」。各事例と連絡は見出しから直接。</p>
                   </li>
                   <li>
-                    <h3>空欄は空欄</h3>
-                    <p>書いてないことは書かない。動機の作文もしない。印は該当行にだけ。</p>
-                    <p class="detail"><span class="mark">※未</span> PDF にない ／ <span class="mark">※本人談</span> PDF になく本人の説明 ／ <span class="mark">※本人追記待ち</span> 枠はあるが具体を本人が足す</p>
+                    <h3>スマートフォンは1頁</h3>
+                    <p>幅が狭いときは見開きにしない。角をつままなくても、ボタンとキーボードで進める。</p>
                   </li>
                   <li>
-                    <h3>スキャンできる密度</h3>
-                    <p>1頁に1主題。3・4・5 だけ太く。数字は丸めない。</p>
-                    <p class="detail">めくりは page-flip 2.0.7。トンマナは白表紙ディスクロージャー。</p>
+                    <h3>テキスト版</h3>
+                    <p>同じ内容を、めくりなしで読める。上の「テキスト版へ」。</p>
                   </li>
                 </ul>
-                <p class="fn">野球の壁紙は社名の響きだけ。本人の成績ではない <span class="mark">※未</span>。</p>
               </div>
             </div>
 
-            <!-- 10 何を切った -->
+            <!-- 12 改修と検証 -->
             <div class="leaf" data-book-page>
               <div class="sheet">
-                <p class="running">P.10 — このめくり本</p>
-                <h2>載せないもの</h2>
-                <p class="kicker">切った頁は、職歴の正本側に残る。</p>
-                <ul class="cut">
-                  <li>Findy / 職務経歴書の業務内容コピペ</li>
-                  <li>利用技術のカタログ、マージ件数の羅列</li>
-                  <li>ENGAGEMENT / ONBOARDING / REPORT を同じ粒度で全部書くこと</li>
-                  <li>銀行2社の打順を、職歴の目次として置くこと</li>
-                  <li>独立の成績頁・科目辞書・読み方マニュアル</li>
+                <p class="running">P.12 — この本</p>
+                <h2>改修の前後と、実施した検証</h2>
+                <div class="compare">
+                  <article>
+                    <p class="field-label">前</p>
+                    <p>最初の見開きは読み方と仕組みの説明。仕事の1話は後ろ。打順が各章で繰り返された。編集用の印が本文に残っていた。</p>
+                  </article>
+                  <article>
+                    <p class="field-label">後</p>
+                    <p>最初の見開きは結論と証拠。ONBOARDING は P.03–04。打順は P.01 だけ。公開本文から編集メモを外した。</p>
+                  </article>
+                </div>
+                <ul class="verify" id="verify-list">
+                  <li>幅 1440px で表紙・最初の見開き・テキスト版を撮影した。欠けは見えていない。</li>
+                  <li>幅 390px で表紙・概要・ONBOARDING が単頁になった。頁内の縦スクロールは起きなかった。</li>
+                  <li>「概要を見る」「概要へ」、見出し、前後ボタン、← → で全16頁に届いた。</li>
+                  <li>テキスト版だけで、経歴・得意・証拠・連絡の骨格に届いた。</li>
+                  <li>公開リンク 6本は、ログアウトの HTTP 200 で開いた。</li>
                 </ul>
-                <p class="identity identity-sm">得意は打順で残す。<br />目次にはしない。</p>
-                <p class="fn">残した打順は、仕組みの中と、次の見開きの1話の中だけ。1・2 と 6〜9 は技能名。</p>
+                <p class="fn">角をつまむ操作そのものは、この検証では見ていない。</p>
               </div>
             </div>
 
-            <!-- 11 仕事の1話 問題と判断 -->
+            <!-- 13 証拠リンク -->
             <div class="leaf" data-book-page>
               <div class="sheet">
-                <p class="running">
-                  <svg class="role-svg" viewBox="0 0 24 24" role="img" aria-label="仕事の1話"><title>仕事の1話</title><use href="#mark-story" /></svg>
-                  P.11 — 仕事の1話
-                </p>
-                <h2>リニューアルの土台が、分かれていた</h2>
-                <p class="kicker">ONBOARDING · 2025.12〜。旧 TRIPLE MANUAL からのリニューアル。名前の変更は自分の案ではない。</p>
-                <ul class="story">
+                <p class="running">P.13 — 証拠</p>
+                <h2>ログアウトで開く先</h2>
+                <p class="kicker">リポジトリのトップで済ませない。確認できる内容だけ。</p>
+                <ul class="deep-links">
                   <li>
-                    <p class="story-phase">問題</p>
-                    <h3>リポが4つ。面が二つ。</h3>
-                    <p>従業員は LIFF、管理者は Web。旧 MANUAL のデータは型が違い、まだ移せていない <span class="mark">※本人談</span>。</p>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/README.md">applied-loop README</a>
+                    <span>学習ループの公開入口</span>
                   </li>
                   <li>
-                    <p class="story-phase">判断</p>
-                    <h3>先に束ねる。移行は急がない</h3>
-                    <p>リポを一つにし、従業員側とつなぎ、AI を使えるハーネスを入れる。データ移行は型が違うので未着手のまま置く。</p>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">ADR-0020</a>
+                    <span>出題停止を見て、日次教科書へ変えた判断</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a>
+                    <span>近い誤解を自動マージしない、人の選択</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a>
+                    <span>理解ゲートの設計</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/portfolio/blob/main/index.html">portfolio / index.html</a>
+                    <span>この本のソース</span>
                   </li>
                 </ul>
-                <p class="fn">事実は Findy / PDF と本人訂正。組織リポは未読。名前変更の主導は書かない。右頁 →</p>
-              </div>
-            </div>
-
-            <!-- 12 結果といま -->
-            <div class="leaf" data-book-page>
-              <div class="sheet sheet-lineup">
-                <p class="running">
-                  <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-story" /></svg>
-                  P.12 — 仕事の1話
-                </p>
-                <h2>土台を一つにした。移行はまだ</h2>
-                <ul class="story">
-                  <li>
-                    <p class="story-phase">結果</p>
-                    <h3>4リポ → npm workspaces</h3>
-                    <p>モノレポに統合し、AI ハーネスを移植。従業員は LIFF、管理者は Web。連結の中身は <span class="mark">※本人追記待ち</span>。</p>
-                  </li>
-                  <li>
-                    <p class="story-phase">いまの運用</p>
-                    <h3>データ移行は未着手</h3>
-                    <p>旧 MANUAL からの移行はまだ。型がまったく違う <span class="mark">※本人談</span>。完成は使える・監視できる・原因を追える。</p>
-                  </li>
-                </ul>
-                <ol class="lineup">
-                  <li class="bat is-cleanup is-cleanup-start">
-                    <span class="bat-no">3</span>
-                    <span class="bat-skill">リポを一つにする</span>
-                    <span class="bat-note">4リポ → npm workspaces モノレポ</span>
-                  </li>
-                  <li class="bat is-cleanup is-four">
-                    <span class="bat-no">4</span>
-                    <span class="bat-skill">従業員側とつなぐ</span>
-                    <span class="bat-note">LIFF と管理者 Web。中身は ※本人追記待ち</span>
-                  </li>
-                  <li class="bat is-cleanup is-cleanup-end">
-                    <span class="bat-no">5</span>
-                    <span class="bat-skill">AI を使えるようにする</span>
-                    <span class="bat-note">ハーネスを移植・整備</span>
-                  </li>
-                </ol>
-                <p class="fn">この話の 3・4・5。4本目の移行は右上の「いま」。名前変更は書かない。</p>
-              </div>
-            </div>
-
-            <!-- 13 出典 -->
-            <div class="leaf" data-book-page>
-              <div class="sheet">
-                <p class="running">P.13 — 出典</p>
-                <h2>読んだもの / 読んでいないもの</h2>
-                <p class="kicker">推測しない。読めなかったものは読めなかったと書く。</p>
-                <ul class="why">
-                  <li>
-                    <h3>読んだ</h3>
-                    <p>職務経歴書 PDF（2026年9月18日現在）。本人談。個人リポジトリ workbench / llm-config / applied-loop（2026-09-18）。</p>
-                  </li>
-                  <li>
-                    <h3>読んでいない</h3>
-                    <p>組織の private（ONBOARDING 本体の実コード）。Obsidian vault 本体。Findy のログイン後本文。1話のモノレポとハーネスは PDF / Findy。名前変更の主導は本人訂正で書かない。データ移行の未着手は <span class="mark">※本人談</span>。</p>
-                  </li>
-                  <li>
-                    <h3>社名と人名</h3>
-                    <p>顧客名・社内メンバー名は書かない。社内件数の公開可否は本人判断。139/121 は入口の参考。</p>
-                  </li>
-                </ul>
-                <p class="fn">行末の <span class="src">.src</span> は、個人リポで裏づけたパス札。居住地・年齢・X は PDF にない。</p>
               </div>
             </div>
 
@@ -657,31 +502,19 @@
             <div class="leaf" data-book-page>
               <div class="sheet">
                 <p class="running">P.14 — 連絡</p>
-                <h2>出典と連絡</h2>
+                <h2>連絡</h2>
                 <ul class="contact">
                   <li>
                     GitHub
                     <a href="https://github.com/shin9898">shin9898</a>
                   </li>
                   <li>
-                    ソース
-                    <a href="https://github.com/shin9898/portfolio">shin9898/portfolio</a>
-                  </li>
-                  <li>
-                    Pages
+                    この本
                     <a href="https://shin9898.github.io/portfolio/">shin9898.github.io/portfolio</a>
                   </li>
-                  <li>
-                    職歴の正本
-                    <span>Findy / 職務経歴書 PDF</span>
-                  </li>
                 </ul>
-                <p class="field-label field-label-gap">資格</p>
-                <p class="tags">ITパスポート（2024年）</p>
-                <p class="kicker">利用技術のカタログはこの本にない。正本側へ。</p>
-                <p class="fn">
-                  静的 HTML。めくりは StPageFlip（page-flip 2.0.7）。v4 は未 push。公開中の Pages は旧版のことがある。
-                </p>
+                <p>いま公開する連絡先は GitHub だけ。ほかの宛先は書いていない。</p>
+                <p>職歴の正本は職務経歴書側。この本には載せない。案内の URL は未設定。</p>
                 <p class="fn credit-line">
                   Baseball icons (wallpaper) by
                   <a href="https://thenounproject.com/creator/hafizcreative.id/">Hafiz Nur Lutfianto</a>
@@ -704,24 +537,13 @@
 
             <!-- 15 裏表紙 -->
             <div class="leaf leaf-cover leaf-back" data-book-page data-density="hard">
-              <div class="cover cover-back">
-                <p class="cover-kicker">以上</p>
+              <div class="cover cover-back cover-simple">
+                <p class="cover-kicker">閉じたあと</p>
                 <h2 class="cover-title">Koki<br />Hata</h2>
-                <p class="cover-sub">仕組みと、仕事の1話 · 2026年9月18日現在</p>
-                <dl class="cols">
-                  <div>
-                    <dt>銀行</dt>
-                    <dd>約8年 · 2社</dd>
-                  </div>
-                  <div>
-                    <dt>仕組み</dt>
-                    <dd>4つ</dd>
-                  </div>
-                  <div>
-                    <dt>仕事</dt>
-                    <dd>1話</dd>
-                  </div>
-                </dl>
+                <p class="cover-sub">
+                  <a href="https://github.com/shin9898">github.com/shin9898</a>
+                </p>
+                <p class="cover-lede">2026年9月19日現在</p>
                 <p class="three" aria-hidden="true">3&nbsp;&nbsp;3&nbsp;&nbsp;3</p>
               </div>
             </div>
@@ -760,90 +582,65 @@
     </footer>
 
     <section class="plain" id="plain" aria-labelledby="plain-h">
-      <h2 id="plain-h">テキスト版（袋とじ）</h2>
-      <p>JavaScript なし、または支援技術向けの同じ内容。職務経歴書の写しではない。出典は PDF（2026年9月18日現在）、本人談、個人リポジトリ。</p>
+      <h2 id="plain-h">テキスト版</h2>
+      <p>JavaScript なし、または支援技術向けの同じ内容。めくりは不要。</p>
       <dl>
-        <dt>氏名</dt>
-        <dd>Koki Hata · GitHub <a href="https://github.com/shin9898">shin9898</a> · フルスタックエンジニア · 株式会社トリプルスリー</dd>
-        <dt>だれか</dt>
-        <dd>銀行2社 約8年 → 飲食 SaaS フルスタック。福岡中央 → 楽天銀行 → リスキリング（時期・内容は未記入）→ トリプルスリー（2025.08〜、正社員は 2025.10〜）。</dd>
-        <dt>自分で回しているもの</dt>
-        <dd>workbench（skills / hooks / cron / 学習ループ）／ AI ハーネス（Claude → Codex → CodeRabbit、人が検証するゲート）／ ベイビー PdM（2026.07〜、肩書なし、拾う→案→承認→進行→届ける）／ このめくり本</dd>
-        <dt>仕事の1話</dt>
-        <dd>ONBOARDING リニューアルのエンジニアリング弧。問題はリポが4つ・従業員 LIFF と管理者 Web・旧データの型が違う（未移行）→ 判断は先に束ねる（移行は急がない、名前変更は自分の案ではない）→ 結果は npm workspaces モノレポとハーネス移植 → いまはデータ移行未着手。つなぎの中身は本人追記待ち。</dd>
+        <dt id="plain-overview">氏名</dt>
+        <dd>Koki Hata · フルスタックエンジニア · 株式会社トリプルスリー · <a href="https://github.com/shin9898">GitHub shin9898</a></dd>
+        <dt>経歴</dt>
+        <dd>銀行2社 約8年 → 飲食多店舗向けSaaS のフルスタック。</dd>
+        <dt>得意</dt>
+        <dd>
+          3 顧客の声を、開発の案にする（ベイビー PdM · 2026年7月〜）／
+          4 分かれた開発の土台を整える（ONBOARDING）／
+          5 AIを、人が検証できる手順で使う（workbench とハーネス）
+        </dd>
+        <dt>代表証拠</dt>
+        <dd>ONBOARDING で 4リポを npm workspaces の1リポにした。開発速度の変化は書いていない。</dd>
+        <dt>ONBOARDING</dt>
+        <dd>
+          問題: リポが4つ。従業員は LIFF、管理者は Web。旧 MANUAL のデータは型がまったく違う。案件で AI を使う手順も揃っていなかった。
+          判断: 公開できる判断は、npm workspaces で一つにしたこと。連結の中身、移行の次の一手、案件内の役割分担は書いていない。
+          結果: 1リポ。ハーネスを移植・整備。面は LIFF と Web。
+          いま: データ移行は未着手。次の判断は未定。
+        </dd>
+        <dt>workbench</dt>
+        <dd>
+          skills → hooks → cron → 学習。Claude / Codex / Cursor で共用。
+          公開できる例: 2026年8月10日、未回答の確認が上限に達し出題だけが止まったので、日次の教科書へ変えた。
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">ADR-0020</a>
+        </dd>
+        <dt>AI の検証</dt>
+        <dd>
+          Claude が設計、Codex が実装、CodeRabbit がレビュー。人が送る・書く・採用の前で止まる。
+          案件内の差し戻し記録は公開できるものがない。公開の1件は、近い誤解を自動マージせず人が選ぶ判断。
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a>
+        </dd>
+        <dt>顧客の声</dt>
+        <dd>
+          2026年7月〜。指名なし。声 → 案 → 承認 → 進行 → 提供。入口と進行の型まである。
+          承認の個別記録と、声が機能として届いた対応は置いていない。
+        </dd>
+        <dt>この本</dt>
+        <dd>
+          めくりは演出。表紙から概要へ1操作。スマートフォンは1頁。テキスト版あり。
+          改修後は、最初の見開きを結論と証拠にし、ONBOARDING を P.03–04 へ移し、打順は P.01 だけにした。
+          1440px と 390px、見出しとボタンとキー、テキスト版、公開リンク 6本を確認した。角をつまむ操作は見ていない。
+        </dd>
+        <dt>証拠</dt>
+        <dd>
+          <a href="https://github.com/shin9898/applied-loop/blob/main/README.md">README</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">ADR-0020</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a> ·
+          <a href="https://github.com/shin9898/portfolio/blob/main/index.html">この本のソース</a>
+        </dd>
         <dt>連絡</dt>
-        <dd>GitHub <a href="https://github.com/shin9898">shin9898</a> · この本 <a href="https://shin9898.github.io/portfolio/">shin9898.github.io/portfolio</a></dd>
-        <dt>載せない</dt>
-        <dd>Findy / 職務経歴書のコピペ。技術カタログとマージ件数。ENGAGEMENT / ONBOARDING / REPORT の業務目次。銀行2社を職歴の目次にすること。</dd>
+        <dd>
+          <a href="https://github.com/shin9898">github.com/shin9898</a>
+          だけ。職務経歴書の案内の URL は未設定。
+        </dd>
       </dl>
-
-      <h3>打順（仕組みと1話の中。3・4・5番がいちばん強い）</h3>
-      <div class="plain-lineups">
-        <section>
-          <h4>
-            <svg class="role-svg role-svg-inline" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-workbench" /></svg>
-            workbench
-          </h4>
-          <ol>
-            <li>入口を一つにする — my-copy</li>
-            <li>手順を skill に固定 — 84</li>
-            <li><b>hooks を同じ契約にする</b></li>
-            <li><b>短い周期を機械が回す</b> — cron 13本</li>
-            <li><b>学びを知識へ昇格する</b></li>
-            <li>CI</li>
-            <li>安全装置</li>
-            <li>計測</li>
-            <li>正典は vault 一本</li>
-          </ol>
-        </section>
-        <section>
-          <h4>
-            <svg class="role-svg role-svg-inline" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-harness" /></svg>
-            AI ハーネス
-          </h4>
-          <ol>
-            <li>モデル名を文書に複製しない</li>
-            <li>適格性を記録してから使う</li>
-            <li><b>設計・実装・レビューを兼ねない</b> — Claude → Codex → CodeRabbit</li>
-            <li><b>人が止まれる</b></li>
-            <li><b>判断を残す</b></li>
-            <li>Codex は sealed patch で委譲</li>
-            <li>見逃しを別モデルで見る</li>
-            <li>本番 DB は書かない</li>
-            <li>月次で経路を見直す</li>
-          </ol>
-        </section>
-        <section>
-          <h4>
-            <svg class="role-svg role-svg-inline" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-pdm" /></svg>
-            ベイビー PdM 業務（2026.07〜、自発・指名なし）
-          </h4>
-          <p>プロセス: 拾う → 案 → 承認（個別決裁は本人追記待ち）→ 進行 → 届ける（声と提供の対応表は本人追記待ち）</p>
-          <ol>
-            <li>声を拾う入口</li>
-            <li>仕分ける</li>
-            <li><b>解消案にする</b></li>
-            <li><b>進行の契約を敷く</b></li>
-            <li><b>現場に渡す</b></li>
-            <li>見える化</li>
-            <li>承認のゲート設計</li>
-            <li>原文と解釈を混ぜない</li>
-            <li>人が検証できる形に</li>
-          </ol>
-        </section>
-        <section>
-          <h4>
-            <svg class="role-svg role-svg-inline" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-story" /></svg>
-            仕事の1話（ONBOARDING リニューアル）
-          </h4>
-          <ol start="3">
-            <li><b>リポを一つにする</b> — 4 → npm workspaces</li>
-            <li><b>従業員側とつなぐ</b> — LIFF と管理者 Web。中身は本人追記待ち</li>
-            <li><b>AI を使えるようにする</b> — ハーネス移植</li>
-          </ol>
-          <p>データ移行は未着手。旧 MANUAL と型が違う（本人談）。名前変更は自分の案ではない。</p>
-        </section>
-      </div>
     </section>
 
     <script src="./js/vendor/page-flip.browser.js"></script>

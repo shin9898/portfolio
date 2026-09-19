@@ -66,6 +66,26 @@ body::before {
   top: 12px;
 }
 
+.skip-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  width: min(1100px, calc(100% - 24px));
+  margin: 10px auto 0;
+  padding: 8px 14px;
+  background: var(--paper);
+  border: 1px solid rgba(22, 24, 29, 0.08);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.skip-bar a {
+  color: var(--ink);
+}
+
 .mast {
   position: relative;
   z-index: 1;
@@ -396,6 +416,39 @@ body::before {
   color: var(--mute);
 }
 
+.cover-simple {
+  justify-content: flex-start;
+}
+
+.cover-simple .cover-lede {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.cover-cta {
+  appearance: none;
+  align-self: flex-start;
+  margin: 18px 0 auto;
+  padding: 10px 18px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--gothic);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+}
+
+.cover-cta:hover,
+.cover-cta:focus-visible {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.cover-back .cover-sub a {
+  color: inherit;
+}
+
 .cover-back {
   justify-content: center;
 }
@@ -640,6 +693,174 @@ body::before {
   line-height: 1.45;
   color: var(--ink);
   opacity: 0.8;
+}
+
+.inline-jump {
+  appearance: none;
+  margin: 4px 0 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--gothic);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.jump-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 12px;
+}
+
+.proof {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  border: 1px solid var(--ink);
+  background: rgba(22, 24, 29, 0.03);
+}
+
+.proof-head {
+  margin: 4px 0 6px;
+  font-family: var(--mincho);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.proof p {
+  margin: 0 0 6px;
+}
+
+.proof p:last-child {
+  margin-bottom: 0;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.flow li {
+  position: relative;
+  padding: 10px 8px 8px;
+  border: 1px solid var(--ink);
+  min-width: 0;
+}
+
+.flow h3 {
+  margin: 0 0 4px;
+  font-family: var(--mincho);
+  font-size: 15px;
+}
+
+.flow p {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--mute);
+}
+
+.mono-diagram {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.1fr);
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 10px;
+}
+
+.mono-from {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.mono-from span,
+.mono-to {
+  border: 1px dashed var(--rule);
+  padding: 10px 6px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.mono-to {
+  border: 1px solid var(--ink);
+  border-style: solid;
+  font-family: var(--mincho);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  padding: 16px 8px;
+}
+
+.mono-arrow {
+  font-size: 20px;
+  color: var(--note);
+}
+
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.compare article {
+  padding: 8px 10px;
+  border: 1px solid var(--rule);
+}
+
+.compare p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.verify {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--ink);
+}
+
+.verify li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.deep-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deep-links li {
+  display: grid;
+  gap: 2px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.deep-links span {
+  font-size: 12px;
+  color: var(--mute);
+  line-height: 1.45;
 }
 
 .path-line {
@@ -2049,8 +2270,24 @@ a:hover {
     grid-template-columns: 3.8em 1fr;
   }
 
-  .mount.is-showing-cover .book.stf__parent {
+  .mount.is-showing-cover .book.stf__parent,
+  .mount.is-showing-spread .book.stf__parent {
     transform: none;
+  }
+
+  .flow,
+  .compare,
+  .mono-diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .mono-arrow {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .skip-bar {
+    width: calc(100% - 16px);
   }
 
   .desk {

@@ -17,26 +17,25 @@
 
   const titles = [
     "表紙",
-    "だれか",
-    "自分で回しているもの",
-    "workbench 打順",
+    "60秒",
+    "証拠",
+    "ONBOARDING 問題",
+    "ONBOARDING 結果",
     "workbench",
-    "AI ハーネス 打順",
-    "AI ハーネス",
-    "ベイビー PdM 打順",
-    "ベイビー PdM",
-    "このめくり本",
-    "載せないもの",
-    "仕事の1話 問題",
-    "仕事の1話 結果",
-    "出典",
+    "学びの例",
+    "AI の検証",
+    "差し戻し",
+    "顧客の声",
+    "到達地点",
+    "この本",
+    "改修と検証",
+    "証拠",
     "連絡",
     "裏表紙",
   ];
 
   const pages = Array.from(host.querySelectorAll("[data-book-page]"));
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-  // Portrait phones get a taller leaf so nine batters fit without scrolling.
+  // Portrait phones get a taller leaf so a single page fills the stage.
   const narrow = window.matchMedia("(max-width: 720px)").matches;
   const startPage = (function () {
     const n = Number(new URLSearchParams(window.location.search).get("page") || "0");
@@ -159,25 +158,15 @@
   }
 
   function jump(page) {
-    if (!ready || flipping) {
+    if (!ready) {
       return;
     }
     const cur = currentIndex();
     if (visibleIndices(cur).indexOf(page) >= 0) {
       return;
     }
-    const dist = Math.abs(page - cur);
-    const backInPortrait = isPortrait() && page < cur;
-    if (reduce.matches || dist > 2 || (backInPortrait && dist > 1)) {
-      pf.turnToPage(page);
-      paint();
-      return;
-    }
-    if (backInPortrait) {
-      flipPrevPortraitSafe();
-      return;
-    }
-    pf.flip(page, "top");
+    pf.turnToPage(page);
+    paint();
   }
 
   pf.on("flip", function () {
@@ -194,10 +183,16 @@
 
   pf.on("init", function () {
     ready = true;
-    hint.textContent = "角をつまむ。見出しとボタン、← → キーでもめくれる。クリックだけではめくれない（リンクを残すため）。";
+    hint.textContent = "概要へ、見出し、前後ボタン、← → で進める。角をつまむ必要はない。クリックだけではめくれない（リンクを残すため）。";
     if (startPage > 0) {
       try {
         pf.turnToPage(Math.min(startPage, pf.getPageCount() - 1));
+      } catch (err) {
+        /* ignore */
+      }
+    } else if (window.location.hash === "#plain-overview") {
+      try {
+        pf.turnToPage(1);
       } catch (err) {
         /* ignore */
       }
@@ -212,8 +207,17 @@
     go("next");
   });
   jumps.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      jump(Number(btn.getAttribute("data-jump")));
+    btn.addEventListener("click", function (e) {
+      if (ready) {
+        e.preventDefault();
+        jump(Number(btn.getAttribute("data-jump")));
+        if (btn.getAttribute("data-jump") === "1") {
+          const overview = document.getElementById("plain-overview");
+          if (overview && btn.getAttribute("href") === "#plain-overview") {
+            /* Stay on the book; text version remains a fallback. */
+          }
+        }
+      }
     });
   });
 
