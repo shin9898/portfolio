@@ -13,8 +13,8 @@
   --wash: rgba(255, 244, 200, 0.06);
   --edge: rgba(255, 244, 200, 0.28);
   --shadow: rgba(0, 0, 0, 0.55);
-  --mincho: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  --gothic: "IBM Plex Sans JP", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --mincho: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "WenQuanYi Micro Hei", serif;
+  --gothic: "IBM Plex Sans JP", "Hiragino Sans", "Noto Sans JP", "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --wallpaper-w: 900px;
   --wallpaper-h: 600px;
@@ -660,10 +660,17 @@ body::before {
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--ink);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-three li {
-  padding: 8px 0 8px 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 10px 10px 12px;
   border-bottom: 1px solid var(--rule);
   border-left: 3px solid var(--ink);
   background: var(--wash);
@@ -704,7 +711,7 @@ body::before {
   flex-wrap: wrap;
   align-items: center;
   gap: 12px 16px;
-  margin: 10px 0 0;
+  margin-top: auto;
   padding-top: 10px;
   border-top: 1px solid var(--rule);
   font-size: 12px;
@@ -725,9 +732,14 @@ body::before {
   margin: 0;
   padding: 0;
   list-style: none;
+  flex: 1 1 auto;
+  align-content: stretch;
 }
 
 .now-grid li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 10px 8px;
   border: 1px solid var(--rule);
   min-width: 0;
@@ -755,10 +767,15 @@ body::before {
   margin: 10px 0 0;
   padding: 0;
   list-style: none;
+  flex: 1 1 auto;
+  align-content: stretch;
 }
 
 .scope li {
-  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 12px;
   border: 1px solid var(--rule);
   min-width: 0;
 }
@@ -806,10 +823,15 @@ body::before {
   margin: 0 0 12px;
   padding: 0;
   list-style: none;
+  flex: 1 1 auto;
+  align-items: stretch;
 }
 
 .flow li {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 8px 8px;
   border: 1px solid var(--ink);
   min-width: 0;
@@ -1059,11 +1081,16 @@ body::before {
   list-style: none;
   display: grid;
   gap: 8px;
+  flex: 1 1 auto;
+  align-content: stretch;
 }
 
 .beats li {
-  padding: 8px 10px 8px;
+  padding: 10px 12px;
   border: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .beats h3 {
@@ -1889,6 +1916,7 @@ body::before {
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--ink);
+  flex: 1 1 auto;
 }
 
 .story li {
