@@ -191,7 +191,7 @@
                 <h2>仕事の1話と、確かめられる変化</h2>
                 <p class="kicker">ONBOARDING リニューアル。詳細は次の見開き。</p>
                 <p class="lead">
-                  分かれていた開発を npm workspaces の1リポにした。従業員は LIFF、管理者は Web。旧データ移行は未着手。案件で AI を使う手順を移植した。
+                  分かれていた開発を npm workspaces の1リポにした。従業員は LINE ミニアプリ(LIFF)、管理者は Web。旧データ移行は未着手。10月から進める予定。案件で AI を使う手順を移植した。
                 </p>
                 <article class="proof">
                   <p class="field-label">代表証拠</p>
@@ -218,12 +218,12 @@
                   <li>
                     <p class="story-phase">問題</p>
                     <h3>土台が4つに分かれていた</h3>
-                    <p>リポは4つ。従業員は LIFF、管理者は Web。旧 MANUAL のデータは型がまったく違う。案件で AI を使う手順も、まだ揃っていなかった。</p>
+                    <p>リポは4つ。従業員は LINE ミニアプリ(LIFF)、管理者は Web。旧 MANUAL のデータは型がまったく違う。案件で AI を使う手順も、まだ揃っていなかった。</p>
                   </li>
                   <li>
                     <p class="story-phase">判断</p>
                     <h3>公開できる判断は、一つに束ねたこと</h3>
-                    <p>4リポを npm workspaces で一つにした。連結で何をどこにつないだか、移行の次の一手、案件内の役割分担は書いていない。</p>
+                    <p>4リポを npm workspaces で一つにした。連結で何をどこにつないだか、案件内の役割分担は書いていない。</p>
                   </li>
                 </ul>
               </div>
@@ -250,12 +250,12 @@
                       <span class="mono-arrow" aria-hidden="true">→</span>
                       <div class="mono-to">npm workspaces<br />1リポ</div>
                     </div>
-                    <p>ハーネスを移植・整備した。面は LIFF と Web。連結で可能になった操作と、開発速度の変化は書いていない。</p>
+                    <p>ハーネスを移植・整備した。面は LINE ミニアプリ(LIFF) と Web。連結で可能になった操作と、開発速度の変化は書いていない。</p>
                   </li>
                   <li>
                     <p class="story-phase">いま</p>
                     <h3>データ移行は未着手</h3>
-                    <p>旧 MANUAL からの移行は、まだ始めていない。次の判断は未定。</p>
+                    <p>まっさらな prd 環境を先に作り、10月からの新規パイロット企業開放を優先している。移行自体は10月から進める予定。作者の判断。</p>
                   </li>
                 </ul>
               </div>
@@ -343,6 +343,7 @@
                   </li>
                 </ol>
                 <p>同じ手が設計と実装と最終レビューを兼ねない。本番のデータベースは書かない。</p>
+                <p>仮説の検証痕跡は右頁。公開 ADR に残っている。案件の数字ではない。</p>
               </div>
             </div>
 
@@ -353,21 +354,59 @@
                   <svg class="role-svg" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark-harness" /></svg>
                   P.08 — AI の検証
                 </p>
-                <h2>人が差し戻した記録</h2>
-                <p class="kicker">案件内の Claude → Codex → CodeRabbit の差し戻しは、公開できるものがない。下は公開リポジトリの1件。</p>
-                <article class="proof">
-                  <p class="field-label">公開できる検証の1件</p>
-                  <p class="proof-head">近い誤解を、自動ではマージしない</p>
-                  <p>
-                    意味の近い誤解を機械がまとめる案に対し、実測を読んだところ重複ではなく精緻化だった。自動マージはしない。採用は人が選ぶ。
-                  </p>
-                  <p>
-                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">applied-loop ADR-0021</a>
-                  </p>
-                </article>
+                <h2>仮説の検証痕跡</h2>
+                <p class="kicker">applied-loop の公開 ADR。設計と実行を分ける。仮説は proposed。収集の運用だけ accepted。</p>
+                <div class="compare">
+                  <article>
+                    <p class="field-label">設計</p>
+                    <ul class="deep-links">
+                      <li>
+                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">ADR-0009</a>
+                        <span>観測はメタデータだけ。会話本文は読まない</span>
+                      </li>
+                      <li>
+                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a>
+                        <span>H-JOB / H-CYCLE / H-ADAPTER / H-CACHE / H-EVAL の憲章</span>
+                      </li>
+                      <li>
+                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">ADR-0026</a>
+                        <span>自己申告を Gate の証拠にしない</span>
+                      </li>
+                      <li>
+                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0027-h-cycle-evidence-evaluation.md">ADR-0027</a>
+                        <span>H-CYCLE を論理 revision の証拠で評価する</span>
+                      </li>
+                      <li>
+                        <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">ADR-0028</a>
+                        <span>手動 preview は read-only</span>
+                      </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <p class="field-label">実行記録</p>
+                    <p>
+                      2026年8月21日の read-only 観測を
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a>
+                      に残し、そこから仮説を立てた。支持も反証も書いていない。件数はここへ写さない。
+                    </p>
+                    <p>
+                      近い誤解を自動マージしない判断は
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a>。
+                    </p>
+                    <p>
+                      メタデータ収集を15分周期にしたのは
+                      <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">ADR-0040</a>
+                      （accepted）。仮説の支持・反証ではない。
+                    </p>
+                  </article>
+                </div>
                 <p class="fn">
                   理解ゲートの設計は
                   <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a>。
+                  評価を合算しない設計は
+                  <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0035-harness-evaluation-next-action-proposals.md">ADR-0035</a>、
+                  <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0036-harness-evaluation-durable-run-record.md">ADR-0036</a>。
+                  案件内の差し戻しと、workbench / PdM の ADR は公開できるものがない。
                 </p>
               </div>
             </div>
@@ -461,7 +500,7 @@
                   <li>幅 390px で表紙・概要・ONBOARDING が単頁になった。頁内の縦スクロールは起きなかった。</li>
                   <li>「概要を見る」「概要へ」、見出し、前後ボタン、← → で全16頁に届いた。</li>
                   <li>テキスト版だけで、経歴・得意・証拠・連絡の骨格に届いた。</li>
-                  <li>公開リンク 6本は、ログアウトの HTTP 200 で開いた。</li>
+                  <li>公開リンク（applied-loop の ADR と README、この本のソース、GitHub）は、ログアウトの HTTP 200 で開いた。</li>
                 </ul>
                 <p class="fn">角をつまむ操作そのものは、この検証では見ていない。</p>
               </div>
@@ -489,6 +528,30 @@
                   <li>
                     <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a>
                     <span>理解ゲートの設計</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">ADR-0009</a>
+                    <span>ハーネス観測の設計。メタデータだけ</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a>
+                    <span>仮説憲章と、2026-08-21 の観測</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">ADR-0026</a>
+                    <span>自己申告を Gate の証拠にしない</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0027-h-cycle-evidence-evaluation.md">ADR-0027</a>
+                    <span>H-CYCLE 評価の設計</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">ADR-0028</a>
+                    <span>H-CYCLE の手動 preview は read-only</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">ADR-0040</a>
+                    <span>収集を15分周期にした（accepted）</span>
                   </li>
                   <li>
                     <a href="https://github.com/shin9898/portfolio/blob/main/index.html">portfolio / index.html</a>
@@ -599,10 +662,10 @@
         <dd>ONBOARDING で 4リポを npm workspaces の1リポにした。開発速度の変化は書いていない。</dd>
         <dt>ONBOARDING</dt>
         <dd>
-          問題: リポが4つ。従業員は LIFF、管理者は Web。旧 MANUAL のデータは型がまったく違う。案件で AI を使う手順も揃っていなかった。
-          判断: 公開できる判断は、npm workspaces で一つにしたこと。連結の中身、移行の次の一手、案件内の役割分担は書いていない。
-          結果: 1リポ。ハーネスを移植・整備。面は LIFF と Web。
-          いま: データ移行は未着手。次の判断は未定。
+          問題: リポが4つ。従業員は LINE ミニアプリ(LIFF)、管理者は Web。旧 MANUAL のデータは型がまったく違う。案件で AI を使う手順も揃っていなかった。
+          判断: 公開できる判断は、npm workspaces で一つにしたこと。連結の中身、案件内の役割分担は書いていない。
+          結果: 1リポ。ハーネスを移植・整備。面は LINE ミニアプリ(LIFF) と Web。
+          いま: データ移行は未着手。まっさらな prd を先に作り、10月の新規パイロット企業開放を優先。移行は10月から進める予定。作者の判断。
         </dd>
         <dt>workbench</dt>
         <dd>
@@ -613,8 +676,19 @@
         <dt>AI の検証</dt>
         <dd>
           Claude が設計、Codex が実装、CodeRabbit がレビュー。人が送る・書く・採用の前で止まる。
-          案件内の差し戻し記録は公開できるものがない。公開の1件は、近い誤解を自動マージせず人が選ぶ判断。
-          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a>
+          仮説の検証痕跡は applied-loop の公開 ADR。設計は
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">ADR-0009</a>、
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a>、
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">ADR-0026</a>、
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0027-h-cycle-evidence-evaluation.md">ADR-0027</a>、
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">ADR-0028</a>、
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0035-harness-evaluation-next-action-proposals.md">ADR-0035</a>、
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0036-harness-evaluation-durable-run-record.md">ADR-0036</a>。
+          実行記録は ADR-0025 の 2026年8月21日 read-only 観測（仮説は proposed。件数は写さない）、
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a>、
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">ADR-0040</a>
+          （収集の運用。accepted。仮説の支持・反証ではない）。
+          案件内の差し戻しと、workbench / PdM の ADR は公開できるものがない。
         </dd>
         <dt>顧客の声</dt>
         <dd>
@@ -625,7 +699,7 @@
         <dd>
           めくりは演出。表紙から概要へ1操作。スマートフォンは1頁。テキスト版あり。
           改修後は、最初の見開きを結論と証拠にし、ONBOARDING を P.03–04 へ移し、打順は P.01 だけにした。
-          1440px と 390px、見出しとボタンとキー、テキスト版、公開リンク 6本を確認した。角をつまむ操作は見ていない。
+          1440px と 390px、見出しとボタンとキー、テキスト版、公開リンクを確認した。角をつまむ操作は見ていない。
         </dd>
         <dt>証拠</dt>
         <dd>
@@ -633,6 +707,14 @@
           <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0020-daily-retro-knowledge-loop.md">ADR-0020</a> ·
           <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0021-gate-duplicate-guard.md">ADR-0021</a> ·
           <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0006-comprehension-gate.md">ADR-0006</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0009-harness-comprehension.md">ADR-0009</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0025-hypothesis-driven-learning-harness.md">ADR-0025</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0026-textbook-check-gate-bridge.md">ADR-0026</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0027-h-cycle-evidence-evaluation.md">ADR-0027</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0028-h-cycle-manual-preview.md">ADR-0028</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0035-harness-evaluation-next-action-proposals.md">ADR-0035</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0036-harness-evaluation-durable-run-record.md">ADR-0036</a> ·
+          <a href="https://github.com/shin9898/applied-loop/blob/main/docs/adr/0040-durable-automatic-harness-collection.md">ADR-0040</a> ·
           <a href="https://github.com/shin9898/portfolio/blob/main/index.html">この本のソース</a>
         </dd>
         <dt>連絡</dt>

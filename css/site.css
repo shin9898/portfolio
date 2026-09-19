@@ -825,9 +825,21 @@ body::before {
 }
 
 .compare p {
-  margin: 0;
+  margin: 0 0 8px;
   font-size: 12.5px;
   line-height: 1.55;
+}
+
+.compare p:last-child {
+  margin-bottom: 0;
+}
+
+.compare .deep-links li {
+  padding: 4px 0;
+}
+
+.compare .deep-links span {
+  font-size: 11px;
 }
 
 .verify {
@@ -853,7 +865,7 @@ body::before {
 .deep-links li {
   display: grid;
   gap: 2px;
-  padding: 8px 0;
+  padding: 5px 0;
   border-bottom: 1px solid var(--rule);
 }
 
