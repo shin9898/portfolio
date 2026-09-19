@@ -181,7 +181,7 @@
 
   pf.on("init", function () {
     ready = true;
-    hint.textContent = "概要へ、見出し、前後ボタン、← → で進める。角をつまむ必要はない。クリックだけではめくれない（リンクを残すため）。";
+    hint.textContent = "60秒へ、見出し、前後ボタン、← → で進める。角をつまむ必要はない。クリックだけではめくれない（リンクを残すため）。";
     if (startPage > 0) {
       try {
         pf.turnToPage(Math.min(startPage, pf.getPageCount() - 1));

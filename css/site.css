@@ -101,6 +101,7 @@ body::before {
   grid-template-areas:
     "kicker id"
     "title title"
+    "role role"
     "lede lede";
   align-items: baseline;
   gap: 4px 12px;
@@ -114,7 +115,7 @@ body::before {
 .mast-id {
   margin: 0;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.16em;
   color: var(--mute);
 }
@@ -130,23 +131,23 @@ body::before {
 
 .mast-title {
   grid-area: title;
-  margin: 4px 0 0;
+  margin: 6px 0 0;
   font-family: var(--mincho);
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(28px, 3.6vw, 40px);
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.15;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 14px;
 }
 
-.mast-title-sub {
-  font-size: clamp(13px, 1.4vw, 15px);
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  color: var(--mute);
+.mast-role {
+  grid-area: role;
+  margin: 2px 0 0;
+  font-family: var(--mincho);
+  font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  color: var(--ink);
 }
 
 .mast-lede {
@@ -314,14 +315,22 @@ body::before {
 
 .cover-kicker {
   margin: 0;
+  font-family: var(--gothic);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.cover-year {
+  margin: 6px 0 0;
   font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.28em;
+  font-size: 11px;
+  letter-spacing: 0.2em;
   color: var(--mute);
 }
 
 .cover-title {
-  margin: 28px 0 4px;
+  margin: 18px 0 4px;
   font-family: var(--mincho);
   font-size: clamp(40px, 8vw, 52px);
   line-height: 1.05;
@@ -2182,6 +2191,7 @@ a:hover {
       "kicker"
       "id"
       "title"
+      "role"
       "lede";
     width: calc(100% - 16px);
     text-align: left;
